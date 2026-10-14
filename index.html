@@ -12,7 +12,7 @@
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
 <div class="max-w-[1440px] mx-auto px-6 h-[64px] flex items-center justify-between">
 <div class="flex items-center gap-2 font-extrabold text-[21px]"><span class="bg-[#ff3b30] text-white w-8 h-8 rounded-lg flex items-center justify-center">K</span> KYNTO GLOBAL</div>
-<button class="bg-black text-white px-6 py-2.5 rounded-full text-[13px] font-bold">+ Add Your Property</button>
+<button onclick="openAddModal()" class="bg-black hover:bg-neutral-800 text-white px-6 py-2.5 rounded-full text-[13px] font-bold cursor-pointer transition-colors shadow-sm">+ Add Your Property</button>
 </div>
 </header>
 <section class="max-w-[1440px] mx-auto px-6 py-12 text-center">
@@ -33,15 +33,15 @@
 <section id="properties" class="max-w-[1440px] mx-auto px-6 py-10">
 <p class="text-[12px] font-bold tracking-widest text-gray-400 mb-5">9 PROPERTIES • ALL UNIQUE • INTERNATIONAL ONLY • NO DUPLICATES</p>
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full">DUBAI MARINA</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Marina Pearl Tower</h3><p class="text-[11px] text-gray-500">Dubai Marina, UAE</p><div class="flex justify-between mt-3"><b class="text-[13px]">$340 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full">MANHATTAN</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Central Park Glass Loft</h3><p class="text-[11px] text-gray-500">Manhattan, New York, USA</p><div class="flex justify-between mt-3"><b class="text-[13px]">$580 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full">PARIS</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Le Marais Heritage Loft</h3><p class="text-[11px] text-gray-500">Paris, France</p><div class="flex justify-between mt-3"><b class="text-[13px]">$620 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full">ISTANBUL</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Bebek Waterfront Yali</h3><p class="text-[11px] text-gray-500">Bebek, Istanbul</p><div class="flex justify-between mt-3"><b class="text-[13px]">$440 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full">SYDNEY</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Bondi Cliff Organic Retreat</h3><p class="text-[11px] text-gray-500">Bondi, Sydney</p><div class="flex justify-between mt-3"><b class="text-[13px]">$490 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1610641818009-c2051b5e07bf?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full">MYKONOS</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Mykonos Aegean White House</h3><p class="text-[11px] text-gray-500">Mykonos, Greece</p><div class="flex justify-between mt-3"><b class="text-[13px]">$395 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full">LONDON</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Knightsbridge Mews Cottage</h3><p class="text-[11px] text-gray-500">London, UK</p><div class="flex justify-between mt-3"><b class="text-[13px]">$520 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full">BALI</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Ubud Jungle Canopy Villa</h3><p class="text-[11px] text-gray-500">Ubud, Bali</p><div class="flex justify-between mt-3"><b class="text-[13px]">$310 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
-<div class="bg-white rounded-[20px] overflow-hidden border"><div class="relative h-[230px]"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" class="w-full h-full object-cover"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full">PALM JUMEIRAH</span></div><div class="p-4"><h3 class="font-bold text-[15px]">Palm Atlantis Beach Mansion</h3><p class="text-[11px] text-gray-500">Palm Jumeirah, Dubai</p><div class="flex justify-between mt-3"><b class="text-[13px]">$920 /Night</b><span class="text-[11px] font-bold">View →</span></div></div></div>
+<div onclick="openDetailModal(0)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Marina Pearl Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">DUBAI MARINA</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Marina Pearl Tower</h3><p class="text-[11px] text-gray-500">Dubai Marina, UAE</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$340 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(1)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Central Park Glass Loft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">MANHATTAN</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Central Park Glass Loft</h3><p class="text-[11px] text-gray-500">Manhattan, New York, USA</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$580 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(2)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" alt="Le Marais Heritage Loft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">PARIS</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Le Marais Heritage Loft</h3><p class="text-[11px] text-gray-500">Paris, France</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$620 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(3)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80" alt="Bebek Waterfront Yali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">ISTANBUL</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Bebek Waterfront Yali</h3><p class="text-[11px] text-gray-500">Bebek, Istanbul</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$440 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(4)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80" alt="Bondi Cliff Organic Retreat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">SYDNEY</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Bondi Cliff Organic Retreat</h3><p class="text-[11px] text-gray-500">Bondi, Sydney</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$490 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(5)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80" alt="Mykonos Aegean White House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">MYKONOS</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Mykonos Aegean White House</h3><p class="text-[11px] text-gray-500">Mykonos, Greece</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$395 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(6)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" alt="Knightsbridge Mews Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">LONDON</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Knightsbridge Mews Cottage</h3><p class="text-[11px] text-gray-500">London, UK</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$520 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(7)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ubud Jungle Canopy Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">BALI</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Ubud Jungle Canopy Villa</h3><p class="text-[11px] text-gray-500">Ubud, Bali</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$310 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
+<div onclick="openDetailModal(8)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Palm Atlantis Beach Mansion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">PALM JUMEIRAH</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Palm Atlantis Beach Mansion</h3><p class="text-[11px] text-gray-500">Palm Jumeirah, Dubai</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$920 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
 </div>
 </section>
 <section id="help-center" class="max-w-[1440px] mx-auto px-6 py-12">
@@ -72,18 +72,148 @@
 <div><p class="font-bold">Company</p><ul class="mt-3 space-y-2 text-gray-600"><li>About Kynto</li><li>How it Works - 40/30 Model</li><li>Careers</li><li>12 Countries Network</li></ul></div>
 <div><p class="font-bold">Legal</p><ul class="mt-3 space-y-2 text-gray-600"><li>Privacy Policy</li><li>Terms of Service</li><li>© 2026 Kynto. All rights reserved.</li></ul></div>
 </footer>
+
+<!-- 1. ADD PROPERTY MODAL -->
+<div id="addPropertyModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-white rounded-[24px] max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+    <button onclick="closeAddModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center font-bold text-[14px] cursor-pointer transition-colors">&times;</button>
+    <div class="flex items-center gap-2 mb-1">
+      <span class="bg-[#ff3b30] text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs">K</span>
+      <h3 class="text-[20px] font-extrabold text-[#111]">Add Your Property</h3>
+    </div>
+    <p class="text-[12px] text-gray-500 mb-5">List your luxury property with Kynto Global (40% Monthly or 30% Per Booking).</p>
+    <form onsubmit="submitAddProperty(event)" class="space-y-3.5">
+      <div>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Name</label>
+        <input id="addPropName" required placeholder="e.g. Skyline Luxury Villa" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
+      </div>
+      <div>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Location</label>
+        <input id="addPropLocation" required placeholder="e.g. Dubai Marina, UAE" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
+      </div>
+      <div>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Price</label>
+        <input id="addPropPrice" required placeholder="e.g. $450 /Night" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
+      </div>
+      <div>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Image URL</label>
+        <input id="addPropImage" type="url" required placeholder="https://images.unsplash.com/photo-..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
+      </div>
+      <div>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Description</label>
+        <textarea id="addPropDesc" required rows="2" placeholder="Tell us about the property, rooms, amenities, and views..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors resize-none"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-[#ff3b30] hover:bg-[#e03126] text-white font-bold py-3 rounded-full text-[13px] transition-colors cursor-pointer shadow-md mt-2">Submit Property</button>
+    </form>
+  </div>
+</div>
+
+<!-- 2. PROPERTY DETAIL MODAL -->
+<div id="propertyDetailModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-white rounded-[24px] max-w-2xl w-full overflow-hidden shadow-2xl relative my-auto max-h-[92vh] flex flex-col">
+    <button onclick="closeDetailModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-black shadow-md flex items-center justify-center font-bold text-[16px] cursor-pointer transition-all hover:scale-105">&times;</button>
+    <div class="relative h-[280px] sm:h-[340px] bg-black shrink-0">
+      <img id="detailModalImg" src="" alt="Property" class="w-full h-full object-cover">
+      <span id="detailModalTag" class="absolute bottom-4 left-4 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">LOCATION</span>
+    </div>
+    <div class="p-6 sm:p-8 overflow-y-auto">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-4 mb-4">
+        <div>
+          <h3 id="detailModalTitle" class="text-[22px] font-extrabold text-[#111]">Property Title</h3>
+          <p id="detailModalLocation" class="text-[13px] text-gray-500 font-medium mt-0.5">Location</p>
+        </div>
+        <div class="text-left sm:text-right">
+          <span class="text-[11px] text-gray-400 block font-bold uppercase">Rate</span>
+          <b id="detailModalPrice" class="text-[20px] text-[#ff3b30] font-black">$0 /Night</b>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">About This Luxury Property</h4>
+          <p id="detailModalDesc" class="text-[13px] text-gray-600 mt-1 leading-relaxed"></p>
+        </div>
+        <div class="bg-[#fcfcf9] border rounded-2xl p-4 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-gray-400 uppercase">Kynto Management</span>
+            <p class="text-[12px] font-bold text-gray-800">40% Monthly or 30% Per Booking Plan</p>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full">✓ Verified</span>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <button onclick="bookCurrentProperty()" class="flex-1 bg-[#ff3b30] hover:bg-[#e03126] text-white font-bold py-3.5 rounded-full text-[13px] transition-colors cursor-pointer shadow-md text-center">Book Now</button>
+          <button onclick="closeDetailModal()" class="px-6 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3.5 rounded-full text-[13px] transition-colors cursor-pointer">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 const kyntoProperties = [
-  { name: "Marina Pearl Tower", location: "Dubai Marina, UAE", city: "Dubai", country: "UAE", price: "$340 /Night", type: "Luxury Apartment" },
-  { name: "Central Park Glass Loft", location: "Manhattan, New York, USA", city: "New York", country: "USA", price: "$580 /Night", type: "Penthouse Loft" },
-  { name: "Le Marais Heritage Loft", location: "Paris, France", city: "Paris", country: "France", price: "$620 /Night", type: "Heritage Loft" },
-  { name: "Bebek Waterfront Yali", location: "Bebek, Istanbul, Turkey", city: "Istanbul", country: "Turkey", price: "$440 /Night", type: "Waterfront Villa" },
-  { name: "Bondi Cliff Organic Retreat", location: "Bondi, Sydney, Australia", city: "Sydney", country: "Australia", price: "$490 /Night", type: "Cliffside Villa" },
-  { name: "Mykonos Aegean White House", location: "Mykonos, Greece", city: "Mykonos", country: "Greece", price: "$395 /Night", type: "Aegean Beach House" },
-  { name: "Knightsbridge Mews Cottage", location: "London, UK", city: "London", country: "UK", price: "$520 /Night", type: "Mews Cottage" },
-  { name: "Ubud Jungle Canopy Villa", location: "Ubud, Bali, Indonesia", city: "Bali", country: "Indonesia", price: "$310 /Night", type: "Jungle Canopy Villa" },
-  { name: "Palm Atlantis Beach Mansion", location: "Palm Jumeirah, Dubai, UAE", city: "Dubai", country: "UAE", price: "$920 /Night", type: "Beachfront Mansion" }
+  { name: "Marina Pearl Tower", location: "Dubai Marina, UAE", city: "Dubai", country: "UAE", price: "$340 /Night", type: "Luxury Apartment", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80", tag: "DUBAI MARINA", tagBg: "bg-[#ff4d4d]", desc: "High-floor waterfront luxury apartment with floor-to-ceiling glass, private infinity pool access, marina promenade views, and dedicated concierge." },
+  { name: "Central Park Glass Loft", location: "Manhattan, New York, USA", city: "New York", country: "USA", price: "$580 /Night", type: "Penthouse Loft", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80", tag: "MANHATTAN", tagBg: "bg-black", desc: "Ultra-modern duplex penthouse loft overlooking Central Park, featuring private elevator access, designer marble chef kitchen, and smart automated glass terrace." },
+  { name: "Le Marais Heritage Loft", location: "Paris, France", city: "Paris", country: "France", price: "$620 /Night", type: "Heritage Loft", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80", tag: "PARIS", tagBg: "bg-[#ff4d4d]", desc: "Authentic 19th-century Haussmannian luxury loft blending historic crown moldings with minimalist contemporary bespoke styling. Minutes from Notre-Dame." },
+  { name: "Bebek Waterfront Yali", location: "Bebek, Istanbul, Turkey", city: "Istanbul", country: "Turkey", price: "$440 /Night", type: "Waterfront Villa", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80", tag: "ISTANBUL", tagBg: "bg-black", desc: "Palatial historical waterfront yalı directly on the Bosphorus strait. Features heated swimming pool, private boat pier, and Turkish marble hammam spa." },
+  { name: "Bondi Cliff Organic Retreat", location: "Bondi, Sydney, Australia", city: "Sydney", country: "Australia", price: "$490 /Night", type: "Cliffside Villa", image: "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80", tag: "SYDNEY", tagBg: "bg-[#ff4d4d]", desc: "Sculptural organic concrete & sandstone architectural retreat perched over Bondi cliffs with rim-flow pool and uninterrupted Pacific Ocean vistas." },
+  { name: "Mykonos Aegean White House", location: "Mykonos, Greece", city: "Mykonos", country: "Greece", price: "$395 /Night", type: "Aegean Beach House", image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80", tag: "MYKONOS", tagBg: "bg-black", desc: "Traditional Cycladic whitewashed luxury villa overlooking the Aegean Sea, featuring panoramic sunset pergolas, private plunge pool, and stone courtyard." },
+  { name: "Knightsbridge Mews Cottage", location: "London, UK", city: "London", country: "UK", price: "$520 /Night", type: "Mews Cottage", image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80", tag: "LONDON", tagBg: "bg-[#ff4d4d]", desc: "Prestigious 3-story glass and brick mews cottage in Knightsbridge with heated courtyard garden, Carrara marble chef kitchen, and private cinema room." },
+  { name: "Ubud Jungle Canopy Villa", location: "Ubud, Bali, Indonesia", city: "Bali", country: "Indonesia", price: "$310 /Night", type: "Jungle Canopy Villa", image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80", tag: "BALI", tagBg: "bg-black", desc: "Open-air biophilic bamboo and teak villa suspended over the Ubud river canopy. Features private infinity edge pool, open starlight rainfall shower, and tropical gardens." },
+  { name: "Palm Atlantis Beach Mansion", location: "Palm Jumeirah, Dubai, UAE", city: "Dubai", country: "UAE", price: "$920 /Night", type: "Beachfront Mansion", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80", tag: "PALM JUMEIRAH", tagBg: "bg-[#ff4d4d]", desc: "Palatial beachfront mansion on the Palm Jumeirah with private white sand beach, private boat slip, waterfall infinity pool, and 24/7 dedicated butler service." }
 ];
+
+function openAddModal(){
+  const m = document.getElementById('addPropertyModal');
+  m.classList.remove('hidden');
+  m.classList.add('flex');
+}
+function closeAddModal(){
+  const m = document.getElementById('addPropertyModal');
+  m.classList.add('hidden');
+  m.classList.remove('flex');
+}
+function submitAddProperty(e){
+  e.preventDefault();
+  alert("Property submitted for review!");
+  document.getElementById('addPropName').value = '';
+  document.getElementById('addPropLocation').value = '';
+  document.getElementById('addPropPrice').value = '';
+  document.getElementById('addPropImage').value = '';
+  document.getElementById('addPropDesc').value = '';
+  closeAddModal();
+}
+
+function openDetailModal(idx){
+  const p = kyntoProperties[idx];
+  if(!p) return;
+  document.getElementById('detailModalImg').src = p.image;
+  document.getElementById('detailModalTitle').textContent = p.name;
+  document.getElementById('detailModalLocation').textContent = p.location;
+  document.getElementById('detailModalPrice').textContent = p.price;
+  document.getElementById('detailModalDesc').textContent = p.desc;
+  const tag = document.getElementById('detailModalTag');
+  tag.textContent = p.tag || p.city.toUpperCase();
+  tag.className = `absolute bottom-4 left-4 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow ${p.tagBg || 'bg-black'}`;
+
+  const m = document.getElementById('propertyDetailModal');
+  m.classList.remove('hidden');
+  m.classList.add('flex');
+}
+function closeDetailModal(){
+  const m = document.getElementById('propertyDetailModal');
+  m.classList.add('hidden');
+  m.classList.remove('flex');
+}
+function bookCurrentProperty(){
+  const title = document.getElementById('detailModalTitle').textContent;
+  alert("Booking request initiated for " + title + "! Our Kynto concierge will reach out to confirm your reservation.");
+}
+
+document.getElementById('addPropertyModal').addEventListener('click', e => {
+  if(e.target.id === 'addPropertyModal') closeAddModal();
+});
+document.getElementById('propertyDetailModal').addEventListener('click', e => {
+  if(e.target.id === 'propertyDetailModal') closeDetailModal();
+});
 
 function sendBot(){
   const input = document.getElementById('botInput');
