@@ -1,90 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kynto Global - 12 Countries Co-Host Network</title>
+<title>Kynto Global - Luxury Co-Hosting & AI Guest Concierge</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>body{font-family:'Inter',sans-serif;background:#fcfcf9}</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background: #fcfcf9; }
+  .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 8px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  .typing-dot {
+    animation: typingBounce 1.4s infinite ease-in-out both;
+  }
+  .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+  .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes typingBounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+  }
+</style>
 </head>
-<body class="text-[#111]">
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b">
-<div class="max-w-[1440px] mx-auto px-6 h-[64px] flex items-center justify-between">
-<div class="flex items-center gap-2 font-extrabold text-[21px]"><span class="bg-[#ff3b30] text-white w-8 h-8 rounded-lg flex items-center justify-center">K</span> KYNTO GLOBAL</div>
-<button onclick="openAddModal()" class="bg-black hover:bg-neutral-800 text-white px-6 py-2.5 rounded-full text-[13px] font-bold cursor-pointer transition-colors shadow-sm">+ Add Your Property</button>
-</div>
+<body class="text-[#111] antialiased">
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200/80 transition-shadow">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between gap-4">
+    <a href="#" class="flex items-center gap-2.5 font-extrabold text-[20px] tracking-tight">
+      <span class="bg-[#ff3b30] text-white w-8 h-8 rounded-xl flex items-center justify-center font-black shadow-sm shadow-[#ff3b30]/40">K</span>
+      <span>KYNTO <span class="text-[#ff3b30]">GLOBAL</span></span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-[13px] font-semibold text-gray-600">
+      <a href="#properties" class="hover:text-[#ff3b30] transition-colors">Properties (9)</a>
+      <a href="#earnings" class="hover:text-[#ff3b30] transition-colors">How You Earn</a>
+      <a href="#help-center" class="hover:text-[#ff3b30] transition-colors">AI Concierge & Help</a>
+      <a href="https://wa.me/923182653259" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 flex items-center gap-1.5 transition-colors">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Host Desk
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button onclick="openAddModal()" class="bg-black hover:bg-neutral-800 text-white px-5 py-2.5 rounded-full text-[13px] font-bold cursor-pointer transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]">
+        + Add Your Property
+      </button>
+    </div>
+  </div>
 </header>
-<section class="max-w-[1440px] mx-auto px-6 py-12 text-center">
-<h1 class="text-[38px] md:text-[54px] font-extrabold leading-[1.05]">WE MANAGE EVERYTHING - <span class="text-[#ff3b30]">40% Monthly</span> or <span class="text-[#ff3b30]">30% Per Booking</span></h1>
-<p class="mt-4 max-w-2xl mx-auto text-[14px] text-gray-600 font-medium">Become a Host & Earn 60% Monthly or 70% Per Booking - You Earn, We Manage!</p>
-<div class="mt-6 flex justify-center gap-3">
-<a href="#properties" class="bg-[#ff4d4d] text-white px-7 py-3 rounded-full font-bold text-[13px]">View International Properties</a>
-<a href="#help-center" class="bg-black text-white px-7 py-3 rounded-full font-bold text-[13px]">Help Center + Live Bot</a>
-</div>
+
+<!-- HERO SECTION -->
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 pt-12 pb-10 text-center">
+  <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200/60 text-[#ff3b30] text-[11px] font-bold px-3.5 py-1.5 rounded-full mb-5">
+    <span class="w-1.5 h-1.5 rounded-full bg-[#ff3b30]"></span> 12-COUNTRY CO-HOST NETWORK • VERIFIED 5-STAR LUXURY
+  </div>
+  <h1 class="text-[34px] sm:text-[46px] md:text-[54px] font-black tracking-tight leading-[1.08] max-w-4xl mx-auto">
+    WE MANAGE EVERYTHING - <span class="text-[#ff3b30]">40% Monthly</span> or <span class="text-[#ff3b30]">30% Per Booking</span>
+  </h1>
+  <p class="mt-4 max-w-2xl mx-auto text-[15px] sm:text-[16px] text-gray-600 font-medium leading-relaxed">
+    Become a Host & Earn 60% Monthly or 70% Per Booking - You Earn, We Manage!
+  </p>
+  <div class="mt-7 flex flex-wrap justify-center gap-3">
+    <a href="#properties" class="bg-[#ff3b30] hover:bg-[#e03126] text-white px-7 py-3.5 rounded-full font-bold text-[13px] transition-all shadow-md shadow-[#ff3b30]/30 hover:scale-[1.02]">
+      Explore 9 Luxury Properties
+    </a>
+    <a href="#help-center" class="bg-black hover:bg-neutral-800 text-white px-7 py-3.5 rounded-full font-bold text-[13px] transition-all shadow-sm hover:scale-[1.02]">
+      Open AI Guest Concierge 🤖
+    </a>
+  </div>
 </section>
-<section class="max-w-[1440px] mx-auto px-6">
-<div class="grid md:grid-cols-3 gap-5">
-<div class="bg-white border-2 border-[#ff3b30]/30 rounded-[20px] p-6 relative"><span class="absolute -top-3 left-6 bg-[#ff3b30] text-white text-[10px] font-bold px-3 py-1 rounded-full">MOST POPULAR</span><h3 class="font-bold">Full Management - 40%</h3><p class="text-[12px] text-gray-500 mt-1">We handle everything.</p></div>
-<div class="bg-white border rounded-[20px] p-6"><h3 class="font-bold">Per Booking - 30%</h3><p class="text-[12px] text-gray-500 mt-1">You keep ownership.</p></div>
-<div class="bg-white border rounded-[20px] p-6"><h3 class="font-bold">Zero Fixed Cost</h3><p class="text-[12px] text-gray-500 mt-1">No monthly fees.</p></div>
-</div>
+
+<!-- EARNINGS / COMMISSION PLANS -->
+<section id="earnings" class="max-w-[1440px] mx-auto px-4 sm:px-6 py-6">
+  <div class="grid md:grid-cols-3 gap-5">
+    <div class="bg-white border-2 border-[#ff3b30] rounded-[24px] p-6 sm:p-7 relative shadow-sm hover:shadow-md transition-shadow">
+      <span class="absolute -top-3.5 left-6 bg-[#ff3b30] text-white text-[10px] font-extrabold tracking-wider px-3.5 py-1 rounded-full shadow-sm">
+        MOST POPULAR
+      </span>
+      <div class="flex items-baseline justify-between">
+        <h3 class="font-extrabold text-[18px]">Monthly Plan</h3>
+        <span class="text-[26px] font-black text-[#ff3b30]">40%</span>
+      </div>
+      <p class="text-[13px] font-bold text-gray-800 mt-1">Host Keeps 60% Revenue</p>
+      <p class="text-[12px] text-gray-500 mt-2 leading-relaxed">
+        Fixed monthly partnership. We handle all bookings, guest communication, keyless check-ins, dynamic pricing, and 5-star cleaning turnover.
+      </p>
+    </div>
+
+    <div class="bg-white border border-gray-200 rounded-[24px] p-6 sm:p-7 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-baseline justify-between">
+        <h3 class="font-extrabold text-[18px]">Per Booking Plan</h3>
+        <span class="text-[26px] font-black text-[#ff3b30]">30%</span>
+      </div>
+      <p class="text-[13px] font-bold text-gray-800 mt-1">Host Keeps 70% Revenue</p>
+      <p class="text-[12px] text-gray-500 mt-2 leading-relaxed">
+        Flexible pay-per-stay. Only pay commission when guests book. You retain full calendar flexibility while Kynto handles guest care and turnovers.
+      </p>
+    </div>
+
+    <div class="bg-white border border-gray-200 rounded-[24px] p-6 sm:p-7 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-baseline justify-between">
+        <h3 class="font-extrabold text-[18px]">Zero Fixed Cost</h3>
+        <span class="text-[26px] font-black text-gray-900">$0</span>
+      </div>
+      <p class="text-[13px] font-bold text-gray-800 mt-1">No Setup Fees • No Hidden Costs</p>
+      <p class="text-[12px] text-gray-500 mt-2 leading-relaxed">
+        Automatic bi-weekly payouts on the 1st & 15th via Wise, Payoneer, or direct international wire in USD. Complete dashboard transparency.
+      </p>
+    </div>
+  </div>
 </section>
-<section id="properties" class="max-w-[1440px] mx-auto px-6 py-10">
-<p class="text-[12px] font-bold tracking-widest text-gray-400 mb-5">9 PROPERTIES • ALL UNIQUE • INTERNATIONAL ONLY • NO DUPLICATES</p>
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<div onclick="openDetailModal(0)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Marina Pearl Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">DUBAI MARINA</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Marina Pearl Tower</h3><p class="text-[11px] text-gray-500">Dubai Marina, UAE</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$340 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(1)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Central Park Glass Loft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">MANHATTAN</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Central Park Glass Loft</h3><p class="text-[11px] text-gray-500">Manhattan, New York, USA</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$580 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(2)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" alt="Le Marais Heritage Loft" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">PARIS</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Le Marais Heritage Loft</h3><p class="text-[11px] text-gray-500">Paris, France</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$620 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(3)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80" alt="Bebek Waterfront Yali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">ISTANBUL</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Bebek Waterfront Yali</h3><p class="text-[11px] text-gray-500">Bebek, Istanbul</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$440 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(4)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80" alt="Bondi Cliff Organic Retreat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">SYDNEY</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Bondi Cliff Organic Retreat</h3><p class="text-[11px] text-gray-500">Bondi, Sydney</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$490 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(5)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80" alt="Mykonos Aegean White House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">MYKONOS</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Mykonos Aegean White House</h3><p class="text-[11px] text-gray-500">Mykonos, Greece</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$395 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(6)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" alt="Knightsbridge Mews Cottage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">LONDON</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Knightsbridge Mews Cottage</h3><p class="text-[11px] text-gray-500">London, UK</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$520 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(7)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ubud Jungle Canopy Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">BALI</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Ubud Jungle Canopy Villa</h3><p class="text-[11px] text-gray-500">Ubud, Bali</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$310 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-<div onclick="openDetailModal(8)" class="bg-white rounded-[20px] overflow-hidden border cursor-pointer hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group"><div class="relative h-[230px] overflow-hidden"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Palm Atlantis Beach Mansion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><span class="absolute top-3 left-3 bg-[#ff4d4d] text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">PALM JUMEIRAH</span></div><div class="p-4"><h3 class="font-bold text-[15px] group-hover:text-[#ff3b30] transition-colors">Palm Atlantis Beach Mansion</h3><p class="text-[11px] text-gray-500">Palm Jumeirah, Dubai</p><div class="flex justify-between items-center mt-3"><b class="text-[13px] text-[#111]">$920 /Night</b><span class="text-[11px] font-bold text-[#ff3b30] group-hover:underline">View →</span></div></div></div>
-</div>
+
+<!-- PROPERTIES GRID SECTION -->
+<section id="properties" class="max-w-[1440px] mx-auto px-4 sm:px-6 py-10">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+    <div>
+      <span class="text-[11px] font-extrabold tracking-widest text-[#ff3b30] uppercase">Global Portfolio</span>
+      <h2 class="text-[26px] sm:text-[32px] font-black text-[#111] mt-0.5">9 Verified Luxury Residences</h2>
+      <p class="text-[13px] text-gray-500 font-medium">Each property features a 6-photo verified gallery, dedicated host, and keyless concierge access.</p>
+    </div>
+    
+    <!-- Filter Pills -->
+    <div class="flex flex-wrap gap-2 text-[12px] font-bold">
+      <button onclick="filterProperties('all')" class="filter-btn active bg-black text-white px-4 py-2 rounded-full cursor-pointer transition-all" data-filter="all">All (9)</button>
+      <button onclick="filterProperties('villa')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-4 py-2 rounded-full cursor-pointer transition-all" data-filter="villa">Villas & Mansions</button>
+      <button onclick="filterProperties('loft')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-4 py-2 rounded-full cursor-pointer transition-all" data-filter="loft">Penthouses & Lofts</button>
+      <button onclick="filterProperties('water')" class="filter-btn bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-4 py-2 rounded-full cursor-pointer transition-all" data-filter="water">Waterfront</button>
+    </div>
+  </div>
+
+  <div id="propertiesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Populated by JS -->
+  </div>
 </section>
-<section id="help-center" class="max-w-[1440px] mx-auto px-6 py-12">
-<div class="bg-black rounded-[28px] p-8 md:p-12 grid md:grid-cols-2 gap-10">
-<div>
-<p class="text-[#ff4d4d] text-[11px] font-bold tracking-widest">HELP CENTER • LIVE BOT</p>
-<h2 class="text-white text-[32px] font-extrabold mt-2">Need Help? Ask Kynto AI Assistant</h2>
-<p class="text-gray-400 text-[13px] mt-3">Instant answers 24/7 about worldwide properties, pricing, 40%/30% management plans, and onboarding.</p>
-</div>
-<div class="bg-white rounded-[20px] p-4 h-[440px] flex flex-col">
-<div class="flex items-center gap-2 border-b pb-3"><div class="w-8 h-8 bg-[#ff3b30] rounded-full flex items-center justify-center text-white font-bold">K</div><div><p class="font-bold text-[13px]">Kynto AI Assistant • Online</p><p class="text-[11px] text-gray-500">Kynto Global Expert</p></div></div>
-<div id="chatBox" class="flex-1 overflow-y-auto py-3 space-y-3 text-[12px]"><div class="bg-gray-100 rounded-xl p-3 max-w-[85%]">Hi! I'm <b>Kynto AI Assistant</b> 🤖 Ask me about our worldwide properties (Dubai, London, New York, Paris, Istanbul, etc.), live prices, or our full Airbnb management plans (40% Monthly / 30% Per Booking)!</div></div>
-<div class="flex gap-2 pt-3 border-t"><input id="botInput" placeholder="Ask about Dubai, London, villas, pricing..." class="flex-1 bg-gray-100 rounded-full px-4 py-2.5 text-[12px] outline-none"><button onclick="sendBot()" class="bg-[#ff3b30] text-white px-5 py-2.5 rounded-full text-[12px] font-bold hover:bg-[#e03126] transition-colors">Send</button></div>
-</div>
-</div>
+
+<!-- AI GUEST CONCIERGE & HELP CENTER -->
+<section id="help-center" class="max-w-[1440px] mx-auto px-4 sm:px-6 py-12">
+  <div class="bg-neutral-950 text-white rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-2xl">
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Column: Context & Information -->
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <span class="inline-flex items-center gap-1.5 bg-[#ff3b30]/20 text-[#ff4d4d] border border-[#ff3b30]/30 text-[10px] font-extrabold tracking-widest px-3 py-1 rounded-full uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#ff3b30] animate-ping"></span> Live Guest Support
+          </span>
+          <h2 class="text-[28px] sm:text-[34px] font-black mt-3 leading-tight">Kynto AI Concierge</h2>
+          <p class="text-gray-400 text-[13px] leading-relaxed mt-2">
+            Ask multi-turn questions about check-in/out, Wi-Fi, house rules, parking, amenities, transit directions, or our 40%/30% co-host management plans.
+          </p>
+        </div>
+
+        <!-- Property Context Selector -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-4 space-y-2.5">
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-gray-400">Current Stay / Property Context</label>
+          <select id="chatPropertySelector" onchange="switchChatContext(this.value)" class="w-full bg-neutral-800 border border-neutral-700 text-white text-[13px] font-semibold rounded-xl px-3.5 py-2.5 outline-none focus:border-[#ff3b30] transition-colors cursor-pointer">
+            <option value="general">🌐 General Inquiries & Co-Hosting (All Properties)</option>
+            <option value="dubai-marina">🇦🇪 Marina Pearl Tower (Dubai Marina)</option>
+            <option value="manhattan-loft">🇺🇸 Central Park Glass Loft (New York)</option>
+            <option value="paris-marais">🇫🇷 Le Marais Heritage Loft (Paris)</option>
+            <option value="istanbul-yali">🇹🇷 Bebek Waterfront Yali (Istanbul)</option>
+            <option value="sydney-bondi">🇦🇺 Bondi Cliff Organic Retreat (Sydney)</option>
+            <option value="mykonos-aegean">🇬🇷 Mykonos Aegean White House (Mykonos)</option>
+            <option value="london-knightsbridge">🇬🇧 Knightsbridge Mews Cottage (London)</option>
+            <option value="bali-ubud">🇮🇩 Ubud Jungle Canopy Villa (Bali)</option>
+            <option value="palm-jumeirah">🇦🇪 Palm Atlantis Beach Mansion (Palm Jumeirah)</option>
+          </select>
+          <div id="contextInfoBadge" class="text-[11px] text-gray-400 flex items-center justify-between pt-1">
+            <span id="activeContextName" class="font-medium text-gray-300">Mode: General Inquiries</span>
+            <button onclick="resetCurrentChat()" class="text-xs text-gray-400 hover:text-white underline cursor-pointer">Reset Conversation</button>
+          </div>
+        </div>
+
+        <!-- Safety & Verification Notice -->
+        <div class="bg-neutral-900/60 border border-neutral-800/80 rounded-2xl p-4 text-[12px] text-gray-400 space-y-2">
+          <div class="flex items-center gap-2 text-white font-bold text-[12px]">
+            <span class="text-amber-400">🛡️</span> Verified Host Source of Truth
+          </div>
+          <p class="leading-relaxed">
+            Our concierge uses verified property rules and approved host details. Sensitive account issues, urgent maintenance, and safety matters are routed directly to the emergency host desk.
+          </p>
+          <div class="flex items-center gap-3 pt-1 text-[11px]">
+            <a href="https://wa.me/923182653259" target="_blank" class="text-emerald-400 hover:underline font-bold flex items-center gap-1">
+              💬 Host Desk WhatsApp: +92 318 2653259
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Chat Interface -->
+      <div class="lg:col-span-7 bg-white text-[#111] rounded-[24px] p-4 sm:p-5 h-[560px] flex flex-col shadow-xl relative border border-gray-100">
+        
+        <!-- Chat Header -->
+        <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+          <div class="flex items-center gap-2.5">
+            <div class="relative">
+              <div class="w-9 h-9 bg-[#ff3b30] rounded-xl flex items-center justify-center text-white font-black text-sm shadow-sm">K</div>
+              <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+            </div>
+            <div>
+              <p class="font-bold text-[13px] flex items-center gap-1.5">
+                <span>Kynto AI Concierge</span>
+                <span id="engineBadge" class="text-[10px] bg-red-50 text-[#ff3b30] font-bold px-2 py-0.5 rounded-full">Grounded Engine</span>
+              </p>
+              <p id="chatSubhead" class="text-[11px] text-gray-500 font-medium truncate max-w-[240px] sm:max-w-[320px]">
+                Ready to help with check-in, Wi-Fi, rules & reservations
+              </p>
+            </div>
+          </div>
+          <button onclick="resetCurrentChat()" title="Clear chat history" class="text-[11px] font-semibold text-gray-500 hover:text-black bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors cursor-pointer">
+            Clear
+          </button>
+        </div>
+
+        <!-- Quick Question Chips -->
+        <div id="quickChipsContainer" class="py-2.5 flex items-center gap-1.5 overflow-x-auto custom-scrollbar text-[11px] shrink-0 border-b border-gray-100">
+          <!-- Populated by JS based on selected property -->
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div id="chatBox" class="flex-1 overflow-y-auto py-3 space-y-3.5 text-[13px] custom-scrollbar pr-1">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Typing Indicator Container (hidden by default) -->
+        <div id="typingIndicator" class="hidden pb-2 shrink-0">
+          <div class="inline-flex items-center gap-1.5 bg-gray-100 rounded-2xl px-4 py-2.5 text-gray-500 text-xs">
+            <span class="font-semibold text-gray-600">Kynto Concierge is typing</span>
+            <span class="w-1.5 h-1.5 bg-gray-500 rounded-full typing-dot"></span>
+            <span class="w-1.5 h-1.5 bg-gray-500 rounded-full typing-dot"></span>
+            <span class="w-1.5 h-1.5 bg-gray-500 rounded-full typing-dot"></span>
+          </div>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="pt-2 border-t border-gray-100">
+          <form onsubmit="handleChatSubmit(event)" class="flex items-center gap-2">
+            <input 
+              id="botInput" 
+              type="text" 
+              autocomplete="off"
+              placeholder="Ask about check-in, Wi-Fi, parking, house rules, pricing..." 
+              class="flex-1 bg-gray-50 hover:bg-gray-100/70 focus:bg-white border border-gray-200 focus:border-[#ff3b30] rounded-full px-4 py-3 text-[13px] outline-none transition-all placeholder:text-gray-400"
+            />
+            <button 
+              id="sendBtn" 
+              type="submit" 
+              class="bg-[#ff3b30] hover:bg-[#e03126] text-white px-5 py-3 rounded-full text-[13px] font-bold transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98] cursor-pointer shrink-0 flex items-center gap-1"
+            >
+              <span>Send</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </form>
+          <div class="flex items-center justify-between text-[10px] text-gray-400 mt-1.5 px-2">
+            <span>Press Enter to send • Real-time multi-turn conversation</span>
+            <span id="sessionCounter">Messages: 1</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </section>
-<footer class="max-w-[1440px] mx-auto px-6 py-12 mt-8 border-t grid md:grid-cols-4 gap-8 text-[12px]">
-<div>
-<p class="font-extrabold text-[14px]">Kynto Co-Host Global • 12 Countries</p>
-<p class="text-gray-500 mt-2">International luxury only.</p>
-<div class="flex gap-3 mt-5">
-<a href="https://instagram.com/forkcherry44" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center shadow" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-<a href="https://facebook.com/forkcherry44" target="_blank" class="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center shadow"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-<a href="https://wa.me/923182653259" target="_blank" class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center shadow"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
-</div>
-</div>
-<div><p class="font-bold">Support</p><ul class="mt-3 space-y-2 text-gray-600"><li>Help Center + Kynto AI Assistant</li><li>Contact Support</li><li>Host Guidelines</li><li>Safety Information</li></ul></div>
-<div><p class="font-bold">Company</p><ul class="mt-3 space-y-2 text-gray-600"><li>About Kynto</li><li>How it Works - 40/30 Model</li><li>Careers</li><li>12 Countries Network</li></ul></div>
-<div><p class="font-bold">Legal</p><ul class="mt-3 space-y-2 text-gray-600"><li>Privacy Policy</li><li>Terms of Service</li><li>© 2026 Kynto. All rights reserved.</li></ul></div>
+
+<!-- FOOTER -->
+<footer class="max-w-[1440px] mx-auto px-4 sm:px-6 py-12 border-t border-gray-200 grid md:grid-cols-4 gap-8 text-[12px]">
+  <div>
+    <div class="flex items-center gap-2 font-black text-[16px]">
+      <span class="bg-[#ff3b30] text-white w-7 h-7 rounded-lg flex items-center justify-center font-black text-xs">K</span>
+      <span>KYNTO CO-HOST GLOBAL</span>
+    </div>
+    <p class="text-gray-500 mt-2.5 leading-relaxed">
+      Premium short-term rental management across 12 countries. Full Airbnb co-hosting, guest concierge, and revenue optimization.
+    </p>
+    
+    <!-- SOCIAL ICONS -->
+    <div class="flex items-center gap-3 mt-5">
+      <!-- Instagram -->
+      <a href="https://instagram.com/forkcherry44" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full flex items-center justify-center shadow transition-transform hover:scale-110" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);" title="Instagram">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <!-- Facebook (Updated Destination) -->
+      <a href="https://www.facebook.com/profile.php?id=61593098850359" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#1877F2] hover:bg-[#166fe5] rounded-full flex items-center justify-center shadow transition-transform hover:scale-110" title="Facebook">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/923182653259" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#25D366] hover:bg-[#20ba59] rounded-full flex items-center justify-center shadow transition-transform hover:scale-110" title="WhatsApp Support">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <p class="font-bold text-gray-900">Support & Help</p>
+    <ul class="mt-3 space-y-2 text-gray-600">
+      <li><a href="#help-center" class="hover:text-[#ff3b30]">Kynto AI Concierge</a></li>
+      <li><a href="https://wa.me/923182653259" target="_blank" class="hover:text-[#ff3b30]">Host Emergency Hotline</a></li>
+      <li><a href="#earnings" class="hover:text-[#ff3b30]">Host Guidelines & Pricing</a></li>
+      <li><a href="#properties" class="hover:text-[#ff3b30]">Global Property Directory</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <p class="font-bold text-gray-900">Company</p>
+    <ul class="mt-3 space-y-2 text-gray-600">
+      <li><a href="#earnings" class="hover:text-[#ff3b30]">How It Works (40% / 30%)</a></li>
+      <li><a href="#" onclick="openAddModal(); return false;" class="hover:text-[#ff3b30]">List Your Residence</a></li>
+      <li><a href="#properties" class="hover:text-[#ff3b30]">12 Countries Network</a></li>
+      <li><span class="text-gray-400">Wise & Bank Payouts</span></li>
+    </ul>
+  </div>
+
+  <div>
+    <p class="font-bold text-gray-900">Verified Legal</p>
+    <ul class="mt-3 space-y-2 text-gray-600">
+      <li><span class="text-gray-500">Privacy & Data Isolation Policy</span></li>
+      <li><span class="text-gray-500">Terms of Co-Hosting Service</span></li>
+      <li><span class="text-gray-500">Official Host Support Desk</span></li>
+      <li class="pt-2 text-gray-400">© 2026 Kynto Global. All rights reserved.</li>
+    </ul>
+  </div>
 </footer>
 
 <!-- 1. ADD PROPERTY MODAL -->
 <div id="addPropertyModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
-  <div class="bg-white rounded-[24px] max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
-    <button onclick="closeAddModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center font-bold text-[14px] cursor-pointer transition-colors">&times;</button>
+  <div class="bg-white rounded-[28px] max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+    <button onclick="closeAddModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center font-bold text-[16px] cursor-pointer transition-colors">&times;</button>
     <div class="flex items-center gap-2 mb-1">
-      <span class="bg-[#ff3b30] text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs">K</span>
+      <span class="bg-[#ff3b30] text-white w-7 h-7 rounded-lg flex items-center justify-center font-black text-xs">K</span>
       <h3 class="text-[20px] font-extrabold text-[#111]">Add Your Property</h3>
     </div>
-    <p class="text-[12px] text-gray-500 mb-5">List your luxury property with Kynto Global (40% Monthly or 30% Per Booking).</p>
+    <p class="text-[12px] text-gray-500 mb-5">List your luxury residence with Kynto Global (40% Monthly or 30% Per Booking).</p>
     <form onsubmit="submitAddProperty(event)" class="space-y-3.5">
       <div>
-        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Name</label>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Property Name</label>
         <input id="addPropName" required placeholder="e.g. Skyline Luxury Villa" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
       </div>
       <div>
@@ -92,88 +343,761 @@
         <input id="addPropLocation" required placeholder="e.g. Dubai Marina, UAE" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
       </div>
       <div>
-        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Price</label>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Nightly Price</label>
         <input id="addPropPrice" required placeholder="e.g. $450 /Night" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
       </div>
       <div>
-        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Image URL</label>
+        <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Primary Image URL</label>
         <input id="addPropImage" type="url" required placeholder="https://images.unsplash.com/photo-..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2.5 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors">
       </div>
       <div>
         <label class="block text-[11px] font-bold uppercase text-gray-700 mb-1">Description</label>
         <textarea id="addPropDesc" required rows="2" placeholder="Tell us about the property, rooms, amenities, and views..." class="w-full bg-gray-50 border border-gray-200 rounded-xl px-3.5 py-2 text-[13px] outline-none focus:border-[#ff3b30] focus:bg-white transition-colors resize-none"></textarea>
       </div>
-      <button type="submit" class="w-full bg-[#ff3b30] hover:bg-[#e03126] text-white font-bold py-3 rounded-full text-[13px] transition-colors cursor-pointer shadow-md mt-2">Submit Property</button>
+      <button type="submit" class="w-full bg-[#ff3b30] hover:bg-[#e03126] text-white font-bold py-3 rounded-full text-[13px] transition-colors cursor-pointer shadow-md mt-2">
+        Submit Property for Review
+      </button>
     </form>
   </div>
 </div>
 
-<!-- 2. PROPERTY DETAIL MODAL -->
-<div id="propertyDetailModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
-  <div class="bg-white rounded-[24px] max-w-2xl w-full overflow-hidden shadow-2xl relative my-auto max-h-[92vh] flex flex-col">
-    <button onclick="closeDetailModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-black shadow-md flex items-center justify-center font-bold text-[16px] cursor-pointer transition-all hover:scale-105">&times;</button>
-    <div class="relative h-[280px] sm:h-[340px] bg-black shrink-0">
-      <img id="detailModalImg" src="" alt="Property" class="w-full h-full object-cover">
-      <span id="detailModalTag" class="absolute bottom-4 left-4 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">LOCATION</span>
+<!-- 2. PROPERTY DETAIL MODAL WITH MULTI-PHOTO CAROUSEL & TOUCH SWIPE -->
+<div id="propertyDetailModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-5">
+  <div class="bg-white rounded-[28px] max-w-3xl w-full overflow-hidden shadow-2xl relative my-auto max-h-[94vh] flex flex-col animate-in fade-in zoom-in-95 duration-200">
+    
+    <!-- Close Button -->
+    <button onclick="closeDetailModal()" class="absolute top-4 right-4 z-30 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center font-bold text-[18px] cursor-pointer transition-transform hover:scale-110 shadow-md">
+      &times;
+    </button>
+
+    <!-- CAROUSEL GALLERY CONTAINER -->
+    <div id="galleryContainer" class="relative h-[290px] sm:h-[380px] bg-neutral-950 shrink-0 select-none overflow-hidden group">
+      
+      <!-- Main Photo -->
+      <img id="detailModalImg" src="" alt="Property Gallery" class="w-full h-full object-cover transition-opacity duration-300">
+
+      <!-- Navigation Arrows -->
+      <button onclick="prevPhoto(event)" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center cursor-pointer transition-all hover:scale-110 shadow-lg" title="Previous photo (Left arrow)">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button onclick="nextPhoto(event)" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center cursor-pointer transition-all hover:scale-110 shadow-lg" title="Next photo (Right arrow)">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <!-- Badges Overlay -->
+      <div class="absolute top-4 left-4 z-20 flex items-center gap-2">
+        <span id="detailModalTag" class="text-white text-[10px] font-extrabold px-3 py-1 rounded-full shadow-md bg-[#ff3b30]">LOCATION</span>
+      </div>
+
+      <div class="absolute top-4 right-14 z-20">
+        <span id="photoCounterBadge" class="bg-black/60 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+          Photo 1 of 6
+        </span>
+      </div>
+
+      <!-- Caption Overlay at Bottom -->
+      <div class="absolute bottom-3 left-4 right-4 z-20 flex items-center justify-between text-white text-xs drop-shadow-md bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-xl">
+        <span id="photoCaption" class="font-medium truncate">1. Exterior & Architecture</span>
+        <span class="text-[10px] opacity-80 hidden sm:inline">Swipe or use &larr; &rarr; keys</span>
+      </div>
     </div>
-    <div class="p-6 sm:p-8 overflow-y-auto">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-4 mb-4">
+
+    <!-- THUMBNAIL STRIP -->
+    <div id="thumbStrip" class="bg-neutral-900 px-4 py-2.5 flex items-center gap-2 overflow-x-auto custom-scrollbar shrink-0">
+      <!-- Generated dynamically -->
+    </div>
+
+    <!-- DETAILS CONTENT SCROLL AREA -->
+    <div class="p-6 sm:p-7 overflow-y-auto custom-scrollbar space-y-5">
+      
+      <!-- Title & Price Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 border-b border-gray-100 pb-4">
         <div>
-          <h3 id="detailModalTitle" class="text-[22px] font-extrabold text-[#111]">Property Title</h3>
+          <h3 id="detailModalTitle" class="text-[22px] sm:text-[24px] font-black text-[#111]">Property Title</h3>
           <p id="detailModalLocation" class="text-[13px] text-gray-500 font-medium mt-0.5">Location</p>
-        </div>
-        <div class="text-left sm:text-right">
-          <span class="text-[11px] text-gray-400 block font-bold uppercase">Rate</span>
-          <b id="detailModalPrice" class="text-[20px] text-[#ff3b30] font-black">$0 /Night</b>
-        </div>
-      </div>
-      <div class="space-y-4">
-        <div>
-          <h4 class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">About This Luxury Property</h4>
-          <p id="detailModalDesc" class="text-[13px] text-gray-600 mt-1 leading-relaxed"></p>
-        </div>
-        <div class="bg-[#fcfcf9] border rounded-2xl p-4 flex items-center justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-gray-400 uppercase">Kynto Management</span>
-            <p class="text-[12px] font-bold text-gray-800">40% Monthly or 30% Per Booking Plan</p>
+          <div id="detailModalSpecs" class="flex flex-wrap items-center gap-2 mt-2 text-[11px] font-bold text-gray-600">
+            <!-- Specs badges -->
           </div>
-          <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full">✓ Verified</span>
         </div>
-        <div class="flex gap-3 pt-2">
-          <button onclick="bookCurrentProperty()" class="flex-1 bg-[#ff3b30] hover:bg-[#e03126] text-white font-bold py-3.5 rounded-full text-[13px] transition-colors cursor-pointer shadow-md text-center">Book Now</button>
-          <button onclick="closeDetailModal()" class="px-6 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3.5 rounded-full text-[13px] transition-colors cursor-pointer">Close</button>
+        <div class="text-left sm:text-right shrink-0">
+          <span class="text-[10px] text-gray-400 block font-bold uppercase tracking-wider">Nightly Rate</span>
+          <b id="detailModalPrice" class="text-[22px] text-[#ff3b30] font-black">$0 /Night</b>
         </div>
       </div>
+
+      <!-- Description -->
+      <div>
+        <h4 class="text-[11px] font-extrabold text-gray-400 uppercase tracking-wider">About This Luxury Residence</h4>
+        <p id="detailModalDesc" class="text-[13px] text-gray-600 mt-1.5 leading-relaxed"></p>
+      </div>
+
+      <!-- Key Details Grid (Check-in, Wi-Fi, Parking) -->
+      <div class="grid sm:grid-cols-3 gap-3 text-[12px]">
+        <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-3.5">
+          <p class="font-extrabold text-gray-800 flex items-center gap-1.5">🔑 Check-in / Out</p>
+          <p id="detailCheckInOut" class="text-gray-600 text-[11px] mt-1 leading-snug">3:00 PM Check-in • 11:00 AM Check-out</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-3.5">
+          <p class="font-extrabold text-gray-800 flex items-center gap-1.5">📶 Wi-Fi & Internet</p>
+          <p id="detailWifi" class="text-gray-600 text-[11px] mt-1 leading-snug">High-speed fiber connectivity</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-3.5">
+          <p class="font-extrabold text-gray-800 flex items-center gap-1.5">🚗 Parking & Transit</p>
+          <p id="detailParking" class="text-gray-600 text-[11px] mt-1 leading-snug">Reserved garage space included</p>
+        </div>
+      </div>
+
+      <!-- Amenities Section -->
+      <div>
+        <h4 class="text-[11px] font-extrabold text-gray-400 uppercase tracking-wider">Verified Amenities</h4>
+        <div id="detailAmenitiesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2 text-[12px] text-gray-700">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Host & Concierge Info Card -->
+      <div class="bg-red-50/50 border border-red-100 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <span class="text-[10px] font-extrabold text-[#ff3b30] uppercase">Verified Host Partner</span>
+          <p id="detailHostName" class="text-[13px] font-bold text-gray-900">Host Partner</p>
+          <p class="text-[11px] text-gray-500">Average response time: &lt; 15 minutes • WhatsApp & Airbnb Support</p>
+        </div>
+        <button id="detailAskAiBtn" onclick="chatAboutCurrentProperty()" class="bg-black hover:bg-neutral-800 text-white font-bold px-4 py-2 rounded-xl text-[12px] transition-colors cursor-pointer shrink-0 shadow-sm flex items-center gap-1.5">
+          <span>💬 Ask Concierge About This Stay</span>
+        </button>
+      </div>
+
+      <!-- Modal Bottom Actions -->
+      <div class="flex flex-col sm:flex-row gap-3 pt-2">
+        <button onclick="bookCurrentProperty()" class="flex-1 bg-[#ff3b30] hover:bg-[#e03126] text-white font-bold py-3.5 rounded-full text-[13px] transition-all shadow-md cursor-pointer text-center hover:scale-[1.01]">
+          Request Reservation
+        </button>
+        <button onclick="closeDetailModal()" class="px-6 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3.5 rounded-full text-[13px] transition-colors cursor-pointer">
+          Close Gallery
+        </button>
+      </div>
+
     </div>
   </div>
 </div>
 
 <script>
+// ==========================================
+// 1. DATA MODEL: 9 LUXURY PROPERTIES
+// Each with unique 6-photo array (54 unique verified images, 0 duplicates)
+// ==========================================
 const kyntoProperties = [
-  { name: "Marina Pearl Tower", location: "Dubai Marina, UAE", city: "Dubai", country: "UAE", price: "$340 /Night", type: "Luxury Apartment", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80", tag: "DUBAI MARINA", tagBg: "bg-[#ff4d4d]", desc: "High-floor waterfront luxury apartment with floor-to-ceiling glass, private infinity pool access, marina promenade views, and dedicated concierge." },
-  { name: "Central Park Glass Loft", location: "Manhattan, New York, USA", city: "New York", country: "USA", price: "$580 /Night", type: "Penthouse Loft", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80", tag: "MANHATTAN", tagBg: "bg-black", desc: "Ultra-modern duplex penthouse loft overlooking Central Park, featuring private elevator access, designer marble chef kitchen, and smart automated glass terrace." },
-  { name: "Le Marais Heritage Loft", location: "Paris, France", city: "Paris", country: "France", price: "$620 /Night", type: "Heritage Loft", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80", tag: "PARIS", tagBg: "bg-[#ff4d4d]", desc: "Authentic 19th-century Haussmannian luxury loft blending historic crown moldings with minimalist contemporary bespoke styling. Minutes from Notre-Dame." },
-  { name: "Bebek Waterfront Yali", location: "Bebek, Istanbul, Turkey", city: "Istanbul", country: "Turkey", price: "$440 /Night", type: "Waterfront Villa", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80", tag: "ISTANBUL", tagBg: "bg-black", desc: "Palatial historical waterfront yalı directly on the Bosphorus strait. Features heated swimming pool, private boat pier, and Turkish marble hammam spa." },
-  { name: "Bondi Cliff Organic Retreat", location: "Bondi, Sydney, Australia", city: "Sydney", country: "Australia", price: "$490 /Night", type: "Cliffside Villa", image: "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80", tag: "SYDNEY", tagBg: "bg-[#ff4d4d]", desc: "Sculptural organic concrete & sandstone architectural retreat perched over Bondi cliffs with rim-flow pool and uninterrupted Pacific Ocean vistas." },
-  { name: "Mykonos Aegean White House", location: "Mykonos, Greece", city: "Mykonos", country: "Greece", price: "$395 /Night", type: "Aegean Beach House", image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80", tag: "MYKONOS", tagBg: "bg-black", desc: "Traditional Cycladic whitewashed luxury villa overlooking the Aegean Sea, featuring panoramic sunset pergolas, private plunge pool, and stone courtyard." },
-  { name: "Knightsbridge Mews Cottage", location: "London, UK", city: "London", country: "UK", price: "$520 /Night", type: "Mews Cottage", image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80", tag: "LONDON", tagBg: "bg-[#ff4d4d]", desc: "Prestigious 3-story glass and brick mews cottage in Knightsbridge with heated courtyard garden, Carrara marble chef kitchen, and private cinema room." },
-  { name: "Ubud Jungle Canopy Villa", location: "Ubud, Bali, Indonesia", city: "Bali", country: "Indonesia", price: "$310 /Night", type: "Jungle Canopy Villa", image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80", tag: "BALI", tagBg: "bg-black", desc: "Open-air biophilic bamboo and teak villa suspended over the Ubud river canopy. Features private infinity edge pool, open starlight rainfall shower, and tropical gardens." },
-  { name: "Palm Atlantis Beach Mansion", location: "Palm Jumeirah, Dubai, UAE", city: "Dubai", country: "UAE", price: "$920 /Night", type: "Beachfront Mansion", image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80", tag: "PALM JUMEIRAH", tagBg: "bg-[#ff4d4d]", desc: "Palatial beachfront mansion on the Palm Jumeirah with private white sand beach, private boat slip, waterfall infinity pool, and 24/7 dedicated butler service." }
+  {
+    id: "dubai-marina",
+    name: "Marina Pearl Tower",
+    location: "Dubai Marina, Dubai, UAE",
+    city: "Dubai",
+    country: "UAE",
+    price: "$340 /Night",
+    priceNum: 340,
+    type: "Waterfront Luxury Apartment",
+    category: "water",
+    beds: "2 Beds • 2 King Suites",
+    baths: "2.5 Luxury Baths",
+    maxGuests: 4,
+    rating: 4.97,
+    reviewsCount: 148,
+    tag: "DUBAI MARINA",
+    tagBg: "bg-[#ff4d4d]",
+    desc: "High-floor waterfront luxury apartment with floor-to-ceiling glass, private infinity pool access, marina promenade views, and dedicated concierge.",
+    images: [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80",
+      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&q=80",
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+    ],
+    captions: ["Marina Tower Architecture", "Spacious Contemporary Salon", "Italian Marble Chef Kitchen", "Master Suite with Skyline Views", "Designer Rain Shower Bath", "Private Marina Balcony"],
+    checkIn: "3:00 PM - 10:00 PM. Digital keypad self-check-in; personalized 6-digit access code sent 24h prior to arrival via Airbnb messaging.",
+    checkOut: "11:00 AM strict. Please close windows, leave keys on console, and pull door firmly shut for cleaning turnover.",
+    wifi: "High-speed 500 Mbps fiber. Network: Kynto_MarinaPearl_5G. Password printed on the welcome acrylic card in foyer.",
+    parking: "Dedicated reserved underground parking space #42B (Level P2). Access transponder located on entrance console.",
+    amenities: ["Marina Balcony", "Infinity Pool", "500Mbps Fiber Wi-Fi", "Chef Kitchen", "Nespresso Machine", "In-unit Washer/Dryer", "Central AC", "Gym & Sauna Access", "24/7 Concierge", "Smart 4K TV with Netflix"],
+    rules: ["Strictly non-smoking ($500 sanitization fee)", "Quiet hours 10:00 PM - 8:00 AM", "No unauthorized parties or filming", "Small pets allowed with prior host approval", "Maximum 4 registered guests"],
+    directions: "Located directly on Dubai Marina Walk. 25 minutes by taxi from DXB Airport. 4-minute walk to DMCC Metro Station and Dubai Marina Tram.",
+    recommendations: ["Pier 7 (5 min walk) for 7 floors of waterfront dining", "Marina Walk for morning jogs & yacht charters", "The Beach at JBR (10 min walk) for seaside cafes and clubs"],
+    host: { name: "Elena Rostova", role: "Superhost Partner", phone: "+92 318 2653259" }
+  },
+  {
+    id: "manhattan-loft",
+    name: "Central Park Glass Loft",
+    location: "Upper East Side, Manhattan, New York, USA",
+    city: "New York",
+    country: "USA",
+    price: "$580 /Night",
+    priceNum: 580,
+    type: "Penthouse Loft",
+    category: "loft",
+    beds: "3 Bedrooms • 3 King Suites",
+    baths: "3 Full Marble Baths",
+    maxGuests: 6,
+    rating: 4.99,
+    reviewsCount: 215,
+    tag: "MANHATTAN",
+    tagBg: "bg-black",
+    desc: "Ultra-modern duplex penthouse loft overlooking Central Park, featuring private elevator access, designer marble chef kitchen, and smart automated glass terrace.",
+    images: [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&q=80",
+      "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80"
+    ],
+    captions: ["Manhattan Glass Tower", "Double-Height Sunlit Loft", "Sub-Zero Gourmet Kitchen", "Penthouse King Suite", "Freestanding Soaking Tub", "Central Park Skyline Terrace"],
+    checkIn: "4:00 PM onwards. 24/7 Doorman welcomes you in the lobby and authorizes private elevator access fob.",
+    checkOut: "11:00 AM sharp. Please leave elevator fobs on the kitchen island and notify lobby doorman upon departure.",
+    wifi: "Gigabit 1 Gbps ultra-fast Wi-Fi. Network: CentralPark_Loft_Ultra. Tablet on study desk provides one-tap connection.",
+    parking: "Valet parking garage adjacent to building entrance ($65/day paid directly to garage). No street parking permits provided.",
+    amenities: ["Central Park Views", "Private Elevator", "1Gbps Ultra-Fast Wi-Fi", "Sub-Zero Kitchen", "Wine Cellar", "Marble Soaking Tub", "Automated Blinds", "Private Roof Terrace", "24/7 Doorman", "Washer/Dryer"],
+    rules: ["Strict non-smoking building ($1,000 fine per HOA)", "Quiet hours after 10:00 PM strictly enforced by doorman", "No parties or unauthorized events", "No pets allowed due to building allergy bylaws", "Max 6 guests"],
+    directions: "Located at 5th Ave and 72nd Street. 35 minutes from JFK Airport and 25 minutes from LaGuardia. 2 blocks from the 6 Train 68th St Station.",
+    recommendations: ["Central Park Conservatory Water (2 min walk)", "The Metropolitan Museum of Art (5 min walk)", "Daniel for Michelin 2-star French dining", "Sant Ambroeus on Madison Ave for morning espresso"],
+    host: { name: "Marcus Vance", role: "Kynto Senior Host", phone: "+92 318 2653259" }
+  },
+  {
+    id: "paris-marais",
+    name: "Le Marais Heritage Loft",
+    location: "Le Marais, 4th Arrondissement, Paris, France",
+    city: "Paris",
+    country: "France",
+    price: "$620 /Night",
+    priceNum: 620,
+    type: "Heritage Loft",
+    category: "loft",
+    beds: "2 Bedrooms • 2 Queen Suites",
+    baths: "2 French Limestone Baths",
+    maxGuests: 4,
+    rating: 4.96,
+    reviewsCount: 94,
+    tag: "PARIS",
+    tagBg: "bg-[#ff4d4d]",
+    desc: "Authentic 19th-century Haussmannian luxury loft blending historic crown moldings with minimalist contemporary bespoke styling. Minutes from Notre-Dame.",
+    images: [
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&q=80",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80"
+    ],
+    captions: ["Historic Le Marais Façade", "Haussmannian Grand Living", "Bespoke Minimalist Kitchen", "Parquet Parisian Master Suite", "Limestone Bath with Brass Fittings", "Wrought-Iron Courtyard Balcony"],
+    checkIn: "3:00 PM - 8:00 PM. Courtyard digicode and lockbox. In-person greeting available upon request 24h prior.",
+    checkOut: "10:30 AM. Lock the heavy oak double doors and return key to the courtyard lockbox.",
+    wifi: "High-speed 400 Mbps French fiber. Network: Marais_Haussmann_Loft. Password inside antique armoire.",
+    parking: "Historic pedestrian district; no on-site parking. Public underground parking at Parking Indigo Pont Marie (4 min walk).",
+    amenities: ["Original Haussmann Fireplace", "Juliet Balconies", "400Mbps Fiber Wi-Fi", "Miele Induction Kitchen", "Nespresso Atelier", "Clawfoot Soaking Tub", "Soundproof Double Glazing", "Dyson Hair Care", "Washer/Dryer"],
+    rules: ["Historic wooden parquet: no high heels or dragging luggage across floors", "Strictly non-smoking throughout", "Quiet hours strictly 10:00 PM - 8:00 AM", "No pets allowed", "Max 4 guests"],
+    directions: "Rue des Francs-Bourgeois, Le Marais. 45 min from CDG Airport via RER B or taxi. Metro: Saint-Paul (Line 1) or Pont Marie (Line 7).",
+    recommendations: ["Place des Vosges (3 min walk) for historical gardens", "L'As du Fallafel for iconic street food", "Musée Picasso (6 min walk)", "Boulangerie Utopie for fresh morning pain au chocolat"],
+    host: { name: "Camille Laurent", role: "Paris Co-Host", phone: "+92 318 2653259" }
+  },
+  {
+    id: "istanbul-yali",
+    name: "Bebek Waterfront Yali",
+    location: "Bebek, Bosphorus Strait, Istanbul, Turkey",
+    city: "Istanbul",
+    country: "Turkey",
+    price: "$440 /Night",
+    priceNum: 440,
+    type: "Waterfront Villa",
+    category: "water",
+    beds: "4 Suites • 4 King Beds",
+    baths: "4.5 Turkish Marble Baths",
+    maxGuests: 8,
+    rating: 4.98,
+    reviewsCount: 112,
+    tag: "ISTANBUL",
+    tagBg: "bg-black",
+    desc: "Palatial historical waterfront yalı directly on the Bosphorus strait. Features heated swimming pool, private boat pier, and Turkish marble hammam spa.",
+    images: [
+      "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+      "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&q=80",
+      "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?w=800&q=80",
+      "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80",
+      "https://images.unsplash.com/photo-1541971875076-8f970d573be6?w=800&q=80"
+    ],
+    captions: ["Bosphorus Waterfront Yalı", "Grand Salon with Water Views", "Professional Chef Kitchen", "Waterfront Master Suite", "Traditional Turkish Hammam & Spa", "Private Boat Pier Terrace"],
+    checkIn: "3:00 PM onwards. Private estate manager welcomes you at the gated entrance with key handover.",
+    checkOut: "12:00 PM noon. Late checkout subject to villa availability and host confirmation.",
+    wifi: "Mesh Wi-Fi 6 network across entire villa and private pier (300 Mbps). Network: Bebek_Yali_Guest.",
+    parking: "Private gated courtyard accommodates up to 3 vehicles with 24/7 security guard.",
+    amenities: ["Private Boat Pier", "Heated Waterfront Pool", "Turkish Hammam & Sauna", "Chef Kitchen", "300Mbps Mesh Wi-Fi", "Garden Courtyard", "Outdoor Dining Pavilion", "24/7 Security", "Daily Housekeeping"],
+    rules: ["No outdoor amplified music after 11:00 PM per Bosphorus maritime council", "Smoking permitted on outdoor terraces only", "Private boat dockings require 24h notice to estate manager", "Max 8 guests"],
+    directions: "Cevdet Pasa Avenue in Bebek. 40 minutes from Istanbul Airport (IST). Private water taxi drop-off available directly at villa pier.",
+    recommendations: ["Bebek Park & waterfront promenade (2 min walk)", "Bebek Balıkçısı for iconic seafood on the water", "Lucca Bebek for cocktails and social dining", "Rumeli Fortress (15 min stroll)"],
+    host: { name: "Tariq Demir", role: "Istanbul Luxury Partner", phone: "+92 318 2653259" }
+  },
+  {
+    id: "sydney-bondi",
+    name: "Bondi Cliff Organic Retreat",
+    location: "Bondi Beach, Sydney, Australia",
+    city: "Sydney",
+    country: "Australia",
+    price: "$490 /Night",
+    priceNum: 490,
+    type: "Cliffside Villa",
+    category: "villa",
+    beds: "3 Bedrooms • 3 Queens",
+    baths: "3 Designer En-suites",
+    maxGuests: 6,
+    rating: 4.95,
+    reviewsCount: 168,
+    tag: "SYDNEY",
+    tagBg: "bg-[#ff4d4d]",
+    desc: "Sculptural organic concrete & sandstone architectural retreat perched over Bondi cliffs with rim-flow pool and uninterrupted Pacific Ocean vistas.",
+    images: [
+      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+    ],
+    captions: ["Bondi Coastal Architecture", "Open Ocean Living Concept", "Sandstone Breakfast Island", "Pacific Ocean King Suite", "Monolithic Concrete Bathroom", "Rim-Flow Cliffside Pool"],
+    checkIn: "3:00 PM - 9:00 PM. Digital keypad on sandstone portico. Smart access code issued 24 hours prior.",
+    checkOut: "10:00 AM. Keypad auto-locks upon departure.",
+    wifi: "High-speed NBN 250 Mbps Wi-Fi covering villa, sundeck, and pool area. Network: Bondi_Cliff_Organic.",
+    parking: "Secure double lock-up garage with EV charger (Tesla & Universal Type 2).",
+    amenities: ["Rim-flow Cliff Pool", "Pacific Ocean Views", "Outdoor Surf Shower", "Tesla EV Charger", "250Mbps NBN Wi-Fi", "Sonos Multi-Room Audio", "Weber Gas BBQ", "Ducted Climate Control", "Sunken Lounge"],
+    rules: ["Strictly no parties, bucks/hens nights, or loud music outside after 9:30 PM", "No glass allowed in pool or cliff deck zone", "Non-smoking property throughout", "No pets allowed", "Max 6 guests"],
+    directions: "Fletcher Street overlooking South Bondi. 25 minutes by car/Uber from Sydney Kingsford Smith Airport (SYD). Direct access to coastal track.",
+    recommendations: ["Bondi Icebergs Club & Pool (6 min walk)", "Bondi to Coogee Coastal Walk right outside your door", "Speedos Cafe for seaside brunch", "Sean's Panorama for farm-to-table coastal dining"],
+    host: { name: "Liam O'Connor", role: "Sydney Partner", phone: "+92 318 2653259" }
+  },
+  {
+    id: "mykonos-aegean",
+    name: "Mykonos Aegean White House",
+    location: "Aleomandra, Mykonos, Greece",
+    city: "Mykonos",
+    country: "Greece",
+    price: "$395 /Night",
+    priceNum: 395,
+    type: "Aegean Beach House",
+    category: "villa",
+    beds: "3 Bedrooms • 3 Built-in Stone Kings",
+    baths: "3 Cycladic Plaster Baths",
+    maxGuests: 6,
+    rating: 4.97,
+    reviewsCount: 130,
+    tag: "MYKONOS",
+    tagBg: "bg-black",
+    desc: "Traditional Cycladic whitewashed luxury villa overlooking the Aegean Sea, featuring panoramic sunset pergolas, private plunge pool, and stone courtyard.",
+    images: [
+      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
+      "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=800&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?w=800&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&q=80"
+    ],
+    captions: ["Whitewashed Cycladic Façade", "Sun-Drenched Living Room", "Stone Platform Master Bed", "Cycladic Curved Bath", "Aegean Sunset Plunge Pool", "Outdoor Shaded Dining Pergola"],
+    checkIn: "3:00 PM - 11:00 PM. Local island host greets you at Mykonos Airport or Port with luggage transfer and key handover.",
+    checkOut: "11:00 AM. Airport/port return transfer arranged by concierge.",
+    wifi: "Satellite Starlink high-speed internet (150 Mbps) with coverage across villa terraces.",
+    parking: "Private enclosed parking area for 2 rental SUVs or ATVs inside villa gates.",
+    amenities: ["Private Plunge Pool", "Delos Sunset Views", "Dining Pergola", "Starlink Satellite Wi-Fi", "Stone BBQ", "Free Airport/Port Transfer", "Daily Maid Service", "Sonos Outdoor Audio", "Beach Gear"],
+    rules: ["Island water conservation: please be mindful of fresh water use", "No amplified sound outdoors after midnight", "Smoking permitted outdoors only", "Small trained pets allowed with prior host confirmation"],
+    directions: "Located in Aleomandra, south-west Mykonos. 12 minutes from Mykonos International Airport (JMK) and 15 minutes from Tourlos New Port.",
+    recommendations: ["Ornos Beach (5 min drive) for calm waters and windsurfing", "Scorpios Mykonos (12 min drive) for world-class sunset rituals", "Mykonos Town / Little Venice (10 min drive) for nightlife and shopping", "Kiki's Tavern for authentic wood-fired grilling"],
+    host: { name: "Nikos Vassiliou", role: "Greece Superhost", phone: "+92 318 2653259" }
+  },
+  {
+    id: "london-knightsbridge",
+    name: "Knightsbridge Mews Cottage",
+    location: "Knightsbridge, London SW1X, UK",
+    city: "London",
+    country: "UK",
+    price: "$520 /Night",
+    priceNum: 520,
+    type: "Mews Cottage",
+    category: "loft",
+    beds: "3 Bedrooms • 3 King Rooms",
+    baths: "2.5 Designer Baths",
+    maxGuests: 5,
+    rating: 4.96,
+    reviewsCount: 182,
+    tag: "LONDON",
+    tagBg: "bg-[#ff4d4d]",
+    desc: "Prestigious 3-story glass and brick mews cottage in Knightsbridge with heated courtyard garden, Carrara marble chef kitchen, and private cinema room.",
+    images: [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80",
+      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80",
+      "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800&q=80",
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80"
+    ],
+    captions: ["Knightsbridge Brick Mews", "Designer 3-Story Salon", "Carrara Marble Island Kitchen", "Boutique Mews Master Suite", "Rainfall Walk-in Shower", "Heated Cobblestone Courtyard"],
+    checkIn: "3:00 PM - 10:00 PM. Digital Yale smart keypad on front mews door. Code activated at 3:00 PM on arrival date.",
+    checkOut: "11:00 AM. Please ensure lights and radiant underfloor heating are switched off.",
+    wifi: "Virgin Media 500 Mbps ultra-fast broadband with full mesh coverage on all 3 levels. Network: Knightsbridge_Mews.",
+    parking: "Single private garage bay inside mews (suitable for standard car). Resident permit available for £30/day upon request.",
+    amenities: ["Private Cinema Room", "Heated Courtyard", "Carrara Marble Kitchen", "500Mbps Fiber Broadband", "Radiant Floor Heating", "Wine Fridge", "Integrated Washer/Dryer", "Dyson Purifier & Fans", "Sonos Multi-Zone"],
+    rules: ["Strict non-smoking throughout including courtyard", "Cobblestone mews quiet hours 9:30 PM - 8:00 AM (peaceful residential enclave)", "No commercial photography without host license", "No pets allowed"],
+    directions: "Private gated mews off Ennismore Gardens. 40 minutes from Heathrow via Heathrow Express and Piccadilly Line. 5-minute walk to Knightsbridge Underground Station.",
+    recommendations: ["Harrods Department Store (4 min walk)", "Hyde Park and Serpentine Gallery (3 min walk)", "Dinner by Heston Blumenthal at Mandarin Oriental", "The Grenadier historic pub in Belgravia"],
+    host: { name: "Oliver Sterling", role: "UK Host Director", phone: "+92 318 2653259" }
+  },
+  {
+    id: "bali-ubud",
+    name: "Ubud Jungle Canopy Villa",
+    location: "Sayan Ridge, Ubud, Bali, Indonesia",
+    city: "Bali",
+    country: "Indonesia",
+    price: "$310 /Night",
+    priceNum: 310,
+    type: "Jungle Canopy Villa",
+    category: "villa",
+    beds: "2 Open-air Suites • 2 King Canopy Beds",
+    baths: "2 Balinese River Stone Baths",
+    maxGuests: 4,
+    rating: 4.98,
+    reviewsCount: 240,
+    tag: "BALI",
+    tagBg: "bg-black",
+    desc: "Open-air biophilic bamboo and teak villa suspended over the Ubud river canopy. Features private infinity edge pool, open starlight rainfall shower, and tropical gardens.",
+    images: [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80",
+      "https://images.unsplash.com/photo-1537726235470-8504e3beef77?w=800&q=80",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80"
+    ],
+    captions: ["Jungle Canopy Infinity Pool", "Bamboo Biophilic Living", "King Teak Canopy Bed", "Open Starlight River Stone Bath", "Jungle Dining Pavilion", "Suspended River Valley Deck"],
+    checkIn: "2:00 PM - 8:00 PM. Private villa butler welcomes you with chilled young coconuts and introduces all villa amenities.",
+    checkOut: "12:00 PM noon. Late checkout complimentary if no check-in is scheduled on the same day.",
+    wifi: "High-speed Biznet Fiber 150 Mbps throughout the villa.",
+    parking: "Covered parking pavilion at villa entrance for 2 cars and 4 motorbikes.",
+    amenities: ["Private Infinity Jungle Pool", "Daily Balinese Breakfast", "Dedicated Villa Butler", "150Mbps Biznet Fiber Wi-Fi", "River Stone Soaking Tub", "Mosquito Netting", "Yoga Mats & Pavilion", "In-villa Spa Available"],
+    rules: ["Open-air biophilic design: keep mosquito netting closed around beds at dusk", "Smoking allowed on garden terrace only", "Quiet retreat atmosphere — no loud speakers after 10:00 PM", "No pets allowed"],
+    directions: "Sayan Ridge, Ubud. 75 minutes from Ngurah Rai International Airport (DPS). Airport private transfer included for stays of 3+ nights.",
+    recommendations: ["Campuhan Ridge Walk (10 min drive) for scenic hiking", "Locavore NXT for world-renowned avant-garde dining", "Ubud Traditional Art Market (12 min drive)", "Four Seasons Sayan Bar for river valley sunset cocktails"],
+    host: { name: "Wayan Darma", role: "Bali Partner", phone: "+92 318 2653259" }
+  },
+  {
+    id: "palm-jumeirah",
+    name: "Palm Atlantis Beach Mansion",
+    location: "Frond G, Palm Jumeirah, Dubai, UAE",
+    city: "Dubai",
+    country: "UAE",
+    price: "$920 /Night",
+    priceNum: 920,
+    type: "Beachfront Mansion",
+    category: "water",
+    beds: "5 Suites • 5 Ultra-King Suites",
+    baths: "6 Imperial Marble Baths",
+    maxGuests: 10,
+    rating: 4.99,
+    reviewsCount: 88,
+    tag: "PALM JUMEIRAH",
+    tagBg: "bg-[#ff4d4d]",
+    desc: "Palatial beachfront mansion on the Palm Jumeirah with private white sand beach, private boat slip, waterfall infinity pool, and 24/7 dedicated butler service.",
+    images: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753104-685f4f24cb4d?w=800&q=80",
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80"
+    ],
+    captions: ["Palm Jumeirah Beachfront Estate", "Double-Height Grand Foyer", "Gourmet Chef Kitchen", "Presidential Seafront Suite", "Imperial Marble Jacuzzi Bath", "Private White Sand Cabana"],
+    checkIn: "3:00 PM onwards. Private Frond G security clearance required. Guest names registered 24h in advance. Mansion butler welcomes you on arrival.",
+    checkOut: "11:30 AM. Butler facilitates luggage handling and vehicle departure.",
+    wifi: "High-speed 1 Gbps fiber optic throughout interior, beach cabanas, and pool area. Network: Palm_Atlantis_Mansion.",
+    parking: "Private motor court accommodates up to 4 luxury vehicles, plus 2 covered garage bays with EV charging.",
+    amenities: ["Private White Sand Beach", "Waterfall Pool & Jacuzzi", "24/7 Dedicated Butler", "1Gbps Ultra-Fast Fiber", "Commercial Gourmet Kitchen", "Private Cabana", "Elevator in Residence", "Home Cinema", "State-of-the-Art Security"],
+    rules: ["Palm Jumeirah strict community security: registered guests only on the Frond", "No outdoor DJ sets or loud music after 10:00 PM", "Smoking permitted on beach terrace only", "Pets allowed with prior approval & deposit", "Max 10 guests"],
+    directions: "Frond G, Palm Jumeirah. 30 minutes from DXB Airport and 25 minutes from Al Maktoum Airport (DWC). Private chauffeur transfer available upon booking.",
+    recommendations: ["The Royal Atlantis & Atlantis The Palm (5 min drive)", "Nobu Dubai and Ossiano Underwater Restaurant", "Nakheel Mall & The View at The Palm (7 min drive)", "Private yacht pick-up directly from the mansion beach"],
+    host: { name: "Elena Rostova", role: "Dubai Partner", phone: "+92 318 2653259" }
+  }
 ];
 
-function openAddModal(){
+// ==========================================
+// 2. RENDER PROPERTIES GRID
+// ==========================================
+let currentFilter = 'all';
+
+function renderProperties(filter = 'all') {
+  currentFilter = filter;
+  const grid = document.getElementById('propertiesGrid');
+  grid.innerHTML = '';
+
+  const filtered = kyntoProperties.filter(p => {
+    if (filter === 'all') return true;
+    if (filter === 'villa') return p.category === 'villa' || p.type.toLowerCase().includes('villa') || p.type.toLowerCase().includes('mansion');
+    if (filter === 'loft') return p.category === 'loft' || p.type.toLowerCase().includes('loft') || p.type.toLowerCase().includes('cottage');
+    if (filter === 'water') return p.category === 'water' || p.type.toLowerCase().includes('waterfront') || p.type.toLowerCase().includes('beach') || p.location.toLowerCase().includes('marina');
+    return true;
+  });
+
+  filtered.forEach((p) => {
+    const originalIndex = kyntoProperties.findIndex(item => item.id === p.id);
+    const card = document.createElement('div');
+    card.className = "bg-white rounded-[22px] overflow-hidden border border-gray-200/90 cursor-pointer hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 group flex flex-col";
+    card.onclick = () => openDetailModal(originalIndex);
+
+    card.innerHTML = `
+      <div class="relative h-[235px] overflow-hidden bg-neutral-950">
+        <img src="${p.images[0]}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <span class="absolute top-3 left-3 text-white text-[10px] font-extrabold px-3 py-1 rounded-full shadow-md ${p.tagBg || 'bg-black'}">
+          ${p.tag}
+        </span>
+        <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+          <span>📷</span> ${p.images.length} Photos
+        </span>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+          <span class="text-white text-xs font-semibold">Click to open photo gallery &rarr;</span>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between text-[11px] font-bold text-gray-400 mb-1">
+            <span>${p.type}</span>
+            <span class="text-gray-700 flex items-center gap-0.5">⭐ ${p.rating}</span>
+          </div>
+          <h3 class="font-extrabold text-[16px] text-gray-900 group-hover:text-[#ff3b30] transition-colors leading-snug">
+            ${p.name}
+          </h3>
+          <p class="text-[12px] text-gray-500 mt-1">${p.location}</p>
+          <div class="flex items-center gap-2 mt-2.5 text-[11px] text-gray-500 font-medium">
+            <span>${p.beds.split('•')[0]}</span>
+            <span>•</span>
+            <span>${p.baths.split('•')[0]}</span>
+            <span>•</span>
+            <span>Max ${p.maxGuests} guests</span>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-4 pt-3 border-t border-gray-100">
+          <div>
+            <span class="text-[10px] text-gray-400 uppercase font-bold block">From</span>
+            <b class="text-[15px] text-[#111] font-black">${p.price}</b>
+          </div>
+          <span class="text-[12px] font-bold text-[#ff3b30] group-hover:underline flex items-center gap-1">
+            View Details &rarr;
+          </span>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterProperties(category) {
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    if (b.getAttribute('data-filter') === category) {
+      b.className = "filter-btn active bg-black text-white px-4 py-2 rounded-full cursor-pointer transition-all";
+    } else {
+      b.className = "filter-btn bg-white hover:bg-gray-100 text-gray-700 border border-gray-200 px-4 py-2 rounded-full cursor-pointer transition-all";
+    }
+  });
+  renderProperties(category);
+}
+
+// ==========================================
+// 3. PROPERTY DETAIL MODAL & CAROUSEL GALLERY
+// ==========================================
+let currentPropIdx = 0;
+let currentPhotoIdx = 0;
+
+function openDetailModal(idx) {
+  const p = kyntoProperties[idx];
+  if (!p) return;
+  currentPropIdx = idx;
+  currentPhotoIdx = 0;
+
+  // Set Details
+  document.getElementById('detailModalTitle').textContent = p.name;
+  document.getElementById('detailModalLocation').textContent = p.location;
+  document.getElementById('detailModalPrice').textContent = p.price;
+  document.getElementById('detailModalDesc').textContent = p.desc;
+  
+  const tag = document.getElementById('detailModalTag');
+  tag.textContent = p.tag || p.city.toUpperCase();
+  tag.className = `text-white text-[10px] font-extrabold px-3 py-1 rounded-full shadow-md ${p.tagBg || 'bg-black'}`;
+
+  // Specs
+  const specs = document.getElementById('detailModalSpecs');
+  specs.innerHTML = `
+    <span class="bg-gray-100 px-2.5 py-1 rounded-lg">🛏️ ${p.beds}</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded-lg">🚿 ${p.baths}</span>
+    <span class="bg-gray-100 px-2.5 py-1 rounded-lg">👥 Max ${p.maxGuests} Guests</span>
+    <span class="bg-amber-50 text-amber-900 border border-amber-200/60 px-2.5 py-1 rounded-lg">⭐ ${p.rating} (${p.reviewsCount} reviews)</span>
+  `;
+
+  // CheckIn/Wifi/Parking
+  document.getElementById('detailCheckInOut').textContent = p.checkIn;
+  document.getElementById('detailWifi').textContent = p.wifi;
+  document.getElementById('detailParking').textContent = p.parking;
+
+  // Amenities
+  const amGrid = document.getElementById('detailAmenitiesGrid');
+  amGrid.innerHTML = p.amenities.map(a => `<div class="flex items-center gap-1.5"><span class="text-emerald-600 font-bold">✓</span> <span>${a}</span></div>`).join('');
+
+  // Host Info
+  document.getElementById('detailHostName').textContent = `${p.host.name} • ${p.host.role}`;
+
+  // Render Thumbnails & Photo
+  renderThumbnails(p);
+  updatePhotoView();
+
+  const m = document.getElementById('propertyDetailModal');
+  m.classList.remove('hidden');
+  m.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderThumbnails(property) {
+  const strip = document.getElementById('thumbStrip');
+  strip.innerHTML = '';
+  property.images.forEach((imgUrl, i) => {
+    const thumb = document.createElement('button');
+    thumb.className = `w-14 h-10 sm:w-16 sm:h-11 rounded-lg overflow-hidden shrink-0 border-2 transition-all cursor-pointer ${i === currentPhotoIdx ? 'border-[#ff3b30] scale-105 ring-2 ring-[#ff3b30]/30' : 'border-transparent opacity-60 hover:opacity-100'}`;
+    thumb.onclick = (e) => {
+      e.stopPropagation();
+      currentPhotoIdx = i;
+      updatePhotoView();
+    };
+    thumb.innerHTML = `<img src="${imgUrl}" alt="Thumbnail ${i + 1}" class="w-full h-full object-cover">`;
+    strip.appendChild(thumb);
+  });
+}
+
+function updatePhotoView() {
+  const p = kyntoProperties[currentPropIdx];
+  if (!p) return;
+  const img = document.getElementById('detailModalImg');
+  
+  img.style.opacity = '0.5';
+  img.src = p.images[currentPhotoIdx];
+  img.onload = () => { img.style.opacity = '1'; };
+
+  document.getElementById('photoCounterBadge').textContent = `Photo ${currentPhotoIdx + 1} of ${p.images.length}`;
+  const caption = p.captions && p.captions[currentPhotoIdx] ? `${currentPhotoIdx + 1}. ${p.captions[currentPhotoIdx]}` : `Photo ${currentPhotoIdx + 1}`;
+  document.getElementById('photoCaption').textContent = caption;
+
+  // Update thumbnail active styles
+  const strip = document.getElementById('thumbStrip');
+  const thumbs = strip.querySelectorAll('button');
+  thumbs.forEach((t, i) => {
+    if (i === currentPhotoIdx) {
+      t.className = "w-14 h-10 sm:w-16 sm:h-11 rounded-lg overflow-hidden shrink-0 border-2 border-[#ff3b30] scale-105 ring-2 ring-[#ff3b30]/30 transition-all cursor-pointer";
+      t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    } else {
+      t.className = "w-14 h-10 sm:w-16 sm:h-11 rounded-lg overflow-hidden shrink-0 border-2 border-transparent opacity-60 hover:opacity-100 transition-all cursor-pointer";
+    }
+  });
+}
+
+function prevPhoto(e) {
+  if (e) e.stopPropagation();
+  const p = kyntoProperties[currentPropIdx];
+  if (!p) return;
+  currentPhotoIdx = (currentPhotoIdx - 1 + p.images.length) % p.images.length;
+  updatePhotoView();
+}
+
+function nextPhoto(e) {
+  if (e) e.stopPropagation();
+  const p = kyntoProperties[currentPropIdx];
+  if (!p) return;
+  currentPhotoIdx = (currentPhotoIdx + 1) % p.images.length;
+  updatePhotoView();
+}
+
+function closeDetailModal() {
+  const m = document.getElementById('propertyDetailModal');
+  m.classList.add('hidden');
+  m.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+function bookCurrentProperty() {
+  const p = kyntoProperties[currentPropIdx];
+  alert(`Booking Request Received for ${p.name} (${p.price})!\n\nOur Kynto luxury concierge desk has received your request. A host manager will message you via WhatsApp (${p.host.phone}) within 15 minutes to confirm dates and arrival details.`);
+}
+
+function chatAboutCurrentProperty() {
+  const p = kyntoProperties[currentPropIdx];
+  closeDetailModal();
+  switchChatContext(p.id);
+  const helpSection = document.getElementById('help-center');
+  helpSection.scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => {
+    const input = document.getElementById('botInput');
+    input.focus();
+    input.placeholder = `Ask Elena about ${p.name} (check-in, Wi-Fi, rules, directions)...`;
+  }, 400);
+}
+
+// Touch swipe gestures on Gallery
+let touchStartX = 0;
+let touchEndX = 0;
+const galleryEl = document.getElementById('galleryContainer');
+
+galleryEl.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+galleryEl.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeDiff = touchEndX - touchStartX;
+  if (swipeDiff > 40) {
+    prevPhoto(); // swiped right
+  } else if (swipeDiff < -40) {
+    nextPhoto(); // swiped left
+  }
+}
+
+// Keyboard arrow keys navigation
+window.addEventListener('keydown', e => {
+  const modal = document.getElementById('propertyDetailModal');
+  if (!modal.classList.contains('hidden')) {
+    if (e.key === 'ArrowLeft') prevPhoto();
+    if (e.key === 'ArrowRight') nextPhoto();
+    if (e.key === 'Escape') closeDetailModal();
+  }
+  const addModal = document.getElementById('addPropertyModal');
+  if (!addModal.classList.contains('hidden') && e.key === 'Escape') {
+    closeAddModal();
+  }
+});
+
+// Modal click backdrop to close
+document.getElementById('propertyDetailModal').addEventListener('click', e => {
+  if (e.target.id === 'propertyDetailModal') closeDetailModal();
+});
+document.getElementById('addPropertyModal').addEventListener('click', e => {
+  if (e.target.id === 'addPropertyModal') closeAddModal();
+});
+
+// Add Property Modal Handlers
+function openAddModal() {
   const m = document.getElementById('addPropertyModal');
   m.classList.remove('hidden');
   m.classList.add('flex');
 }
-function closeAddModal(){
+function closeAddModal() {
   const m = document.getElementById('addPropertyModal');
   m.classList.add('hidden');
   m.classList.remove('flex');
 }
-function submitAddProperty(e){
+function submitAddProperty(e) {
   e.preventDefault();
-  alert("Property submitted for review!");
+  alert("Property submitted for review! Our global onboarding team will contact you within 24 hours.");
   document.getElementById('addPropName').value = '';
   document.getElementById('addPropLocation').value = '';
   document.getElementById('addPropPrice').value = '';
@@ -182,106 +1106,405 @@ function submitAddProperty(e){
   closeAddModal();
 }
 
-function openDetailModal(idx){
-  const p = kyntoProperties[idx];
-  if(!p) return;
-  document.getElementById('detailModalImg').src = p.image;
-  document.getElementById('detailModalTitle').textContent = p.name;
-  document.getElementById('detailModalLocation').textContent = p.location;
-  document.getElementById('detailModalPrice').textContent = p.price;
-  document.getElementById('detailModalDesc').textContent = p.desc;
-  const tag = document.getElementById('detailModalTag');
-  tag.textContent = p.tag || p.city.toUpperCase();
-  tag.className = `absolute bottom-4 left-4 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow ${p.tagBg || 'bg-black'}`;
+// ==========================================
+// 4. MULTI-TURN AI GUEST SUPPORT CHATBOT
+// Dedicated per-property conversation history,
+// follow-up contextual understanding,
+// typing indicator, error handling, strict truthfulness
+// ==========================================
+let currentChatProperty = 'general';
 
-  const m = document.getElementById('propertyDetailModal');
-  m.classList.remove('hidden');
-  m.classList.add('flex');
-}
-function closeDetailModal(){
-  const m = document.getElementById('propertyDetailModal');
-  m.classList.add('hidden');
-  m.classList.remove('flex');
-}
-function bookCurrentProperty(){
-  const title = document.getElementById('detailModalTitle').textContent;
-  alert("Booking request initiated for " + title + "! Our Kynto concierge will reach out to confirm your reservation.");
-}
+// Storage for multi-turn sessions per property
+const defaultWelcome = {
+  general: "Hi! I'm **Kynto AI Concierge** 🤖 Ask me about our 9 global luxury properties (Dubai, London, New York, Paris, Istanbul, Sydney, Mykonos, Bali), check-in details, house rules, or our 40% Monthly / 30% Per Booking co-host plans! How can I assist you today?"
+};
 
-document.getElementById('addPropertyModal').addEventListener('click', e => {
-  if(e.target.id === 'addPropertyModal') closeAddModal();
-});
-document.getElementById('propertyDetailModal').addEventListener('click', e => {
-  if(e.target.id === 'propertyDetailModal') closeDetailModal();
-});
+let conversationHistory = {};
 
-function sendBot(){
-  const input = document.getElementById('botInput');
-  const box = document.getElementById('chatBox');
-  const q = input.value.trim();
-  if(!q) return;
-
-  box.innerHTML += `<div class="bg-black text-white rounded-xl p-3 max-w-[80%] ml-auto">${q}</div>`;
-  const lower = q.toLowerCase();
-  let ans = "";
-
-  const matches = kyntoProperties.filter(p => 
-    lower.includes(p.city.toLowerCase()) || 
-    lower.includes(p.country.toLowerCase()) || 
-    lower.includes(p.name.toLowerCase()) || 
-    lower.includes(p.type.toLowerCase()) ||
-    (lower.includes('dubai') && p.city.toLowerCase() === 'dubai') ||
-    (lower.includes('london') && p.city.toLowerCase() === 'london') ||
-    ((lower.includes('new york') || lower.includes('manhattan')) && p.city.toLowerCase() === 'new york') ||
-    (lower.includes('paris') && p.city.toLowerCase() === 'paris') ||
-    (lower.includes('istanbul') && p.city.toLowerCase() === 'istanbul') ||
-    (lower.includes('sydney') && p.city.toLowerCase() === 'sydney') ||
-    (lower.includes('mykonos') && p.city.toLowerCase() === 'mykonos') ||
-    (lower.includes('bali') && p.city.toLowerCase() === 'bali') ||
-    (lower.includes('villa') && p.type.toLowerCase().includes('villa')) ||
-    (lower.includes('apartment') && p.type.toLowerCase().includes('apartment')) ||
-    (lower.includes('penthouse') && p.type.toLowerCase().includes('penthouse')) ||
-    (lower.includes('beach') && p.type.toLowerCase().includes('beach')) ||
-    (lower.includes('mansion') && p.type.toLowerCase().includes('mansion'))
-  );
-
-  if (matches.length > 0) {
-    ans = `<b>Kynto Global</b> manages these prime properties matching your request:<br><br>` + 
-      matches.map(p => `• <b>${p.name}</b> (${p.type})<br>&nbsp;&nbsp;📍 Location: ${p.location}<br>&nbsp;&nbsp;💰 Price: <span class="text-[#ff3b30] font-bold">${p.price}</span>`).join('<br><br>') +
-      `<br><br><i>Kynto Global handles full Airbnb management (cleaning, guest communication, dynamic pricing). Our fee is 40% Monthly or 30% Per Booking!</i>`;
-  } else if (lower.includes('property') || lower.includes('properties') || lower.includes('list') || lower.includes('show') || lower.includes('where') || lower.includes('all')) {
-    ans = `<b>Kynto Global</b> has all types of luxury properties (Apartments, Villas, Beach Houses, Penthouses, Mansions) across international hubs (Dubai, London, New York, Paris, Istanbul, Sydney, Mykonos, Bali):<br><br>` +
-      kyntoProperties.slice(0, 4).map(p => `• <b>${p.name}</b> (${p.type}) — ${p.location} &bull; <b class="text-[#ff3b30]">${p.price}</b>`).join('<br>') +
-      `<br><br><i>...plus 5 more global luxury listings. Ask me about any specific city or property type!</i>`;
-  } else if (lower.includes('fee') || lower.includes('commission') || lower.includes('40') || lower.includes('30') || lower.includes('60') || lower.includes('70') || lower.includes('earn') || lower.includes('plan') || lower.includes('rate') || lower.includes('cost')) {
-    ans = `At <b>Kynto Global</b>, we manage everything so you can earn hands-free:<br><br>` +
-      `• <b>Monthly Plan:</b> Kynto fee is <b>40%</b> &mdash; You earn <b>60%</b> Monthly.<br>` +
-      `• <b>Per Booking Plan:</b> Kynto fee is <b>30%</b> &mdash; You earn <b>70%</b> Per Booking.<br><br>` +
-      `<i>You Earn, We Manage! We take care of 5-star cleaning, 24/7 guest check-in/messaging, and AI dynamic pricing.</i>`;
-  } else if (lower.includes('manage') || lower.includes('cleaning') || lower.includes('guest') || lower.includes('pricing') || lower.includes('service')) {
-    ans = `<b>Kynto Global</b> handles 100% full Airbnb management:<br>` +
-      `1. <b>Hotel-Grade Cleaning:</b> Professional turnover & fresh linens after every stay.<br>` +
-      `2. <b>24/7 Guest Care:</b> Rapid guest messaging, screening, keyless check-ins.<br>` +
-      `3. <b>Smart Dynamic Pricing:</b> Algorithmic price optimization for maximum revenue.<br>` +
-      `Our fee is 40% Monthly or 30% Per Booking (Host earns 60% or 70%).`;
-  } else if (lower.includes('add') || lower.includes('host') || lower.includes('join') || lower.includes('onboard') || lower.includes('list')) {
-    ans = `Becoming a host with <b>Kynto Global</b> is simple:<br>` +
-      `Click the <b>'+ Add Your Property'</b> button above. Fill out the 2-minute onboarding form, and our team will verify your listing within 24 hours to launch worldwide!`;
-  } else if (lower.includes('payout') || lower.includes('pay') || lower.includes('money') || lower.includes('bank') || lower.includes('wise')) {
-    ans = `Host payouts are processed automatically twice a month on the <b>1st and 15th</b> via Wise, Payoneer, or direct international wire transfer in USD.`;
-  } else {
-    ans = `Hello from <b>Kynto Global</b>! We represent luxury properties worldwide (Apartments, Villas, Beach Houses, Penthouses in Dubai, London, New York, Paris, Istanbul, Sydney, Bali, Mykonos).<br><br>We handle full Airbnb management (cleaning, guests, dynamic pricing) for 40% Monthly or 30% Per Booking (you earn 60% or 70%). Which city or property would you like to explore?`;
+function initChatHistory() {
+  try {
+    const saved = sessionStorage.getItem('kynto_chat_history');
+    if (saved) {
+      conversationHistory = JSON.parse(saved);
+    }
+  } catch(e) {
+    console.warn("Storage access restricted", e);
   }
 
-  setTimeout(() => {
-    box.innerHTML += `<div class="bg-gray-100 rounded-xl p-3 max-w-[85%] text-gray-800 leading-relaxed"><b>Kynto AI Assistant:</b><br>${ans}</div>`;
-    box.scrollTop = box.scrollHeight;
-  }, 350);
+  if (!conversationHistory.general || conversationHistory.general.length === 0) {
+    conversationHistory.general = [
+      { role: 'assistant', text: defaultWelcome.general, time: formatTime(new Date()) }
+    ];
+  }
+}
 
-  input.value = '';
+function saveChatHistory() {
+  try {
+    sessionStorage.setItem('kynto_chat_history', JSON.stringify(conversationHistory));
+  } catch(e) {
+    // Session memory active
+  }
+}
+
+function formatTime(date) {
+  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
+function switchChatContext(propId) {
+  currentChatProperty = propId;
+  const selector = document.getElementById('chatPropertySelector');
+  selector.value = propId;
+
+  const targetProp = kyntoProperties.find(p => p.id === propId);
+  const contextName = document.getElementById('activeContextName');
+  const chatSubhead = document.getElementById('chatSubhead');
+  const botInput = document.getElementById('botInput');
+
+  if (targetProp) {
+    contextName.innerHTML = `Mode: <b class="text-white">${targetProp.name}</b> (${targetProp.city})`;
+    chatSubhead.textContent = `Concierge assistance for ${targetProp.name} (${targetProp.location})`;
+    botInput.placeholder = `Ask about check-in, Wi-Fi, rules, parking at ${targetProp.name}...`;
+
+    if (!conversationHistory[propId] || conversationHistory[propId].length === 0) {
+      conversationHistory[propId] = [
+        {
+          role: 'assistant',
+          text: `Welcome to **${targetProp.name}** in ${targetProp.city} 🌟\n\nI am your dedicated stay concierge. I have verified details on **check-in (${targetProp.checkIn.split('.')[0]})**, **Wi-Fi**, **parking**, **house rules**, and **local recommendations**.\n\nHow can I help with your stay?`,
+          time: formatTime(new Date())
+        }
+      ];
+    }
+  } else {
+    contextName.innerHTML = `Mode: <b class="text-white">General Inquiries</b> (All Properties)`;
+    chatSubhead.textContent = "Ready to help with check-in, Wi-Fi, rules & reservations";
+    botInput.placeholder = "Ask about Dubai, London, villas, 40%/30% plans, pricing...";
+  }
+
+  renderQuickChips();
+  renderChatMessages();
+}
+
+function renderQuickChips() {
+  const container = document.getElementById('quickChipsContainer');
+  const targetProp = kyntoProperties.find(p => p.id === currentChatProperty);
+
+  let chips = [];
+  if (targetProp) {
+    chips = [
+      { label: "🔑 Check-in & Out", q: `What are the check-in and check-out times for ${targetProp.name}?` },
+      { label: "📶 Wi-Fi Details", q: `How do I connect to Wi-Fi at ${targetProp.name}?` },
+      { label: "🚗 Parking Info", q: `Where can I park at ${targetProp.name}?` },
+      { label: "📋 House Rules", q: `What are the house rules at ${targetProp.name}?` },
+      { label: "🍽️ Dining Tips", q: `What are the best nearby restaurants to visit?` },
+      { label: "✨ Amenities", q: `What luxury amenities are included?` }
+    ];
+  } else {
+    chips = [
+      { label: "🏡 Show All Properties", q: "Show me all 9 luxury properties and rates" },
+      { label: "💰 40% vs 30% Plans", q: "Explain how the 40% Monthly and 30% Per Booking co-host plans work" },
+      { label: "🇦🇪 Dubai Properties", q: "What properties do you have in Dubai?" },
+      { label: "🗽 New York Loft", q: "Tell me about the Central Park Glass Loft" },
+      { label: "🔑 Check-in Policy", q: "How does the keyless check-in process work for guests?" },
+      { label: "📞 Contact Host", q: "How can I contact the host or concierge desk directly?" }
+    ];
+  }
+
+  container.innerHTML = chips.map(c => `
+    <button onclick="handleQuickChip('${escapeQuotes(c.q)}')" class="whitespace-nowrap bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full font-medium transition-colors cursor-pointer border border-gray-200/60">
+      ${c.label}
+    </button>
+  `).join('');
+}
+
+function escapeQuotes(str) {
+  return str.replace(/'/g, "\\'");
+}
+
+function handleQuickChip(query) {
+  document.getElementById('botInput').value = query;
+  handleChatSubmit(new Event('submit'));
+}
+
+function renderChatMessages() {
+  const box = document.getElementById('chatBox');
+  const messages = conversationHistory[currentChatProperty] || [];
+  box.innerHTML = '';
+
+  messages.forEach(msg => {
+    const isUser = msg.role === 'user';
+    const bubble = document.createElement('div');
+    bubble.className = `flex gap-2.5 ${isUser ? 'justify-end' : 'justify-start'} animate-in fade-in duration-200`;
+
+    if (isUser) {
+      bubble.innerHTML = `
+        <div class="max-w-[85%] sm:max-w-[80%] bg-neutral-900 text-white rounded-[20px] rounded-tr-sm px-4 py-3 shadow-sm">
+          <p class="leading-relaxed whitespace-pre-wrap">${escapeHtml(msg.text)}</p>
+          <span class="block text-[10px] text-gray-400 text-right mt-1">${msg.time}</span>
+        </div>
+      `;
+    } else {
+      bubble.innerHTML = `
+        <div class="w-7 h-7 rounded-lg bg-[#ff3b30] text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-sm">K</div>
+        <div class="max-w-[88%] sm:max-w-[82%] bg-gray-50 border border-gray-200/80 rounded-[20px] rounded-tl-sm px-4 py-3 shadow-sm text-gray-800">
+          <div class="text-[11px] font-extrabold text-[#ff3b30] mb-1">KYNTO AI CONCIERGE</div>
+          <div class="leading-relaxed prose-sm space-y-2">${formatMarkdown(msg.text)}</div>
+          <span class="block text-[10px] text-gray-400 mt-1.5">${msg.time}</span>
+        </div>
+      `;
+    }
+    box.appendChild(bubble);
+  });
+
+  document.getElementById('sessionCounter').textContent = `Messages: ${messages.length}`;
   box.scrollTop = box.scrollHeight;
 }
-document.getElementById('botInput').addEventListener('keydown', e => { if(e.key === 'Enter') sendBot(); });
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function formatMarkdown(text) {
+  let html = escapeHtml(text);
+  // Bold
+  html = html.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+  // Bullet points
+  html = html.replace(/^\s*•\s*(.*)$/gm, '<li class="ml-4 list-disc">$1</li>');
+  html = html.replace(/^\s*\*\s*(.*)$/gm, '<li class="ml-4 list-disc">$1</li>');
+  // Line breaks
+  html = html.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+  return html;
+}
+
+async function handleChatSubmit(e) {
+  if (e) e.preventDefault();
+  const input = document.getElementById('botInput');
+  const userText = input.value.trim();
+  if (!userText) return;
+
+  // Add user message to conversation
+  if (!conversationHistory[currentChatProperty]) {
+    conversationHistory[currentChatProperty] = [];
+  }
+  
+  const userMsg = {
+    role: 'user',
+    text: userText,
+    time: formatTime(new Date())
+  };
+  conversationHistory[currentChatProperty].push(userMsg);
+  input.value = '';
+  renderChatMessages();
+
+  // Show Typing Indicator
+  const indicator = document.getElementById('typingIndicator');
+  indicator.classList.remove('hidden');
+  const box = document.getElementById('chatBox');
+  box.scrollTop = box.scrollHeight;
+
+  // Generate response (calls backend if available, or uses intelligent multi-turn concierge engine)
+  try {
+    const replyText = await generateConciergeResponse(userText, currentChatProperty, conversationHistory[currentChatProperty]);
+    
+    // Add Assistant message
+    const assistantMsg = {
+      role: 'assistant',
+      text: replyText,
+      time: formatTime(new Date())
+    };
+    conversationHistory[currentChatProperty].push(assistantMsg);
+    saveChatHistory();
+  } catch (err) {
+    conversationHistory[currentChatProperty].push({
+      role: 'assistant',
+      text: "I encountered a brief issue connecting to the live assistant service. For urgent stay support or direct reservations, please reach our 24/7 host desk on WhatsApp at **+92 318 2653259**.",
+      time: formatTime(new Date())
+    });
+  } finally {
+    indicator.classList.add('hidden');
+    renderChatMessages();
+  }
+}
+
+// ==========================================
+// 5. CONCIERGE REASONING ENGINE (MULTI-TURN)
+// Evaluates context, prior messages, property data
+// Strictly abides by guest support guidelines:
+// - Never invents codes or addresses
+// - Never independently commits discounts or refunds
+// - Flags emergencies to host immediately
+// ==========================================
+async function generateConciergeResponse(query, propertyId, history) {
+  // Check if a server-side endpoint is configured or available
+  const endpoint = window.KYNTO_AI_ENDPOINT || '/api/chat';
+  
+  if (window.KYNTO_AI_ENDPOINT) {
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          propertyId: propertyId,
+          messages: history
+        })
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data.reply) return data.reply;
+      }
+    } catch (e) {
+      console.log("Custom AI endpoint unavailable, using verified local concierge engine");
+    }
+  }
+
+  // Natural pause for realistic typing cadence
+  await new Promise(r => setTimeout(r, 450));
+
+  const lower = query.toLowerCase();
+  const currentProp = kyntoProperties.find(p => p.id === propertyId);
+  
+  // Inspect previous turn context if this is a follow-up
+  const prevTurns = history.slice(-4);
+  const prevText = prevTurns.map(m => m.text).join(' ').toLowerCase();
+
+  // 1. EMERGENCY / SAFETY / URGENT ISSUES
+  if (lower.includes('emergency') || lower.includes('water leak') || lower.includes('flooding') || lower.includes('smoke') || lower.includes('fire') || lower.includes('locked out') || lower.includes('broken lock') || lower.includes('injury') || lower.includes('police') || lower.includes('smell gas')) {
+    return "🚨 **Urgent Stay Safety Alert**\n\nFor immediate safety, maintenance emergencies, or active lockouts, please contact our 24/7 emergency host team right now:\n\n• **Host Emergency WhatsApp/Phone:** **+92 318 2653259**\n• If there is immediate medical or structural danger, please contact local emergency authorities immediately.\n• If water or gas is actively leaking, locate the main shut-off valve if safe to do so and message our host immediately.";
+  }
+
+  // 2. SENSITIVE: ACCESS CODES / LOCKBOX CODES / EXACT PRIVATE ADDRESS
+  if ((lower.includes('code') || lower.includes('pin') || lower.includes('keypad') || lower.includes('lockbox') || lower.includes('door pass')) && !lower.includes('how')) {
+    return "🔐 **Security & Guest Privacy Notice**\n\nFor the safety and privacy of all registered guests, personalized digital keypad codes and lockbox credentials are generated uniquely per stay. They are delivered securely **24 hours prior to check-in** through the official Airbnb messaging inbox once your reservation is confirmed.\n\nIf your check-in is today and you have not received your code, please WhatsApp our concierge desk at **+92 318 2653259** with your booking confirmation number.";
+  }
+
+  // 3. SENSITIVE: DISCOUNTS / REFUNDS / CANCELLATIONS / UNCONFIRMED RESERVATIONS
+  if (lower.includes('discount') || lower.includes('cheaper') || lower.includes('refund') || lower.includes('cancel my') || lower.includes('negotiat') || lower.includes('price reduction')) {
+    return "💼 **Reservation & Pricing Policy**\n\nOur listed rates reflect prime seasonal pricing and full hotel-grade co-hosting. As an automated concierge, I cannot independently confirm discounts, cancellations, or refunds.\n\n• For extended stays (14+ nights) or custom corporate rates, please submit an inquiry or message host **Elena / Kynto Desk** directly via WhatsApp at **+92 318 2653259**.\n• Official cancellations and refund requests must be processed through your Airbnb booking resolution portal.";
+  }
+
+  // 4. PROPERTY SPECIFIC CONTEXT: Check-in / Early luggage / Check-out
+  if (currentProp) {
+    if (lower.includes('check-in') || lower.includes('check in') || lower.includes('arrive') || lower.includes('luggage') || lower.includes('bags') || lower.includes('early')) {
+      if (lower.includes('early') || lower.includes('luggage') || lower.includes('bags')) {
+        return `🧳 **Early Arrival & Luggage Policy for ${currentProp.name}**\n\nStandard check-in begins at **${currentProp.checkIn.split('.')[0]}**. Early bag drop-off depends entirely on prior guest checkout (11:00 AM) and cleaning turnover schedules.\n\nPlease message our host **${currentProp.host.name}** on WhatsApp at **${currentProp.host.phone}** 24 hours prior to confirm if early luggage storage can be accommodated for your arrival date.`;
+      }
+      return `🔑 **Check-in Instructions for ${currentProp.name}**\n\n• **Check-in Time:** ${currentProp.checkIn}\n• **Check-out Time:** ${currentProp.checkOut}\n• **Access Method:** Keyless digital entry or personal greeting. Personalized access instructions are issued 24h before arrival.\n\nNeed late check-in? Message our host desk at **${currentProp.host.phone}**.`;
+    }
+
+    if (lower.includes('check-out') || lower.includes('checkout') || lower.includes('leave') || lower.includes('depart')) {
+      return `⏰ **Check-out Instructions for ${currentProp.name}**\n\n• **Check-out Time:** ${currentProp.checkOut}\n• **Departure Checklist:** Please turn off air conditioning, place used dishes in the dishwasher, leave keys on the console (if applicable), and ensure the door is firmly locked behind you. Our 5-star cleaning team arrives promptly at checkout time.`;
+    }
+
+    if (lower.includes('wifi') || lower.includes('wi-fi') || lower.includes('internet') || lower.includes('network') || lower.includes('password') || lower.includes('speed')) {
+      return `📶 **Wi-Fi Connectivity for ${currentProp.name}**\n\n• **Details:** ${currentProp.wifi}\n• Suitable for 4K video streaming, high-definition Zoom calls, and remote work.\n• If you experience any connectivity drops, please locate the primary router in the hallway console and power-cycle for 15 seconds.`;
+    }
+
+    if (lower.includes('park') || lower.includes('car') || lower.includes('garage') || lower.includes('ev') || lower.includes('vehicle')) {
+      return `🚗 **Parking Information for ${currentProp.name}**\n\n• **Facility:** ${currentProp.parking}\n• Please ensure vehicles stay strictly within the marked Kynto space to avoid building fines or towing.`;
+    }
+
+    if (lower.includes('rule') || lower.includes('smoke') || lower.includes('smoking') || lower.includes('pet') || lower.includes('dog') || lower.includes('party') || lower.includes('parties') || lower.includes('quiet')) {
+      return `📋 **House Rules for ${currentProp.name}**\n\n` + currentProp.rules.map(r => `• ${r}`).join('\n') + `\n\n*Violation of noise or smoking rules may incur immediate forfeiture of security deposit.*`;
+    }
+
+    if (lower.includes('amenit') || lower.includes('pool') || lower.includes('gym') || lower.includes('kitchen') || lower.includes('bath') || lower.includes('coffee') || lower.includes('nespresso') || lower.includes('tv')) {
+      return `✨ **Included Amenities at ${currentProp.name}**\n\n` + currentProp.amenities.map(a => `• ${a}`).join('\n') + `\n\nEverything is hotel-grade, inspected, and restocked prior to your stay.`;
+    }
+
+    if (lower.includes('food') || lower.includes('eat') || lower.includes('restaurant') || lower.includes('dining') || lower.includes('recommend') || lower.includes('nearby') || lower.includes('sight') || lower.includes('visit')) {
+      return `🍽️ **Local Concierge Recommendations near ${currentProp.name}**\n\n` + currentProp.recommendations.map(rc => `• ${rc}`).join('\n') + `\n\nFeel free to ask our host **${currentProp.host.name}** for bespoke private dining or yacht charter reservations!`;
+    }
+
+    if (lower.includes('direction') || lower.includes('how to get') || lower.includes('airport') || lower.includes('metro') || lower.includes('train') || lower.includes('transit') || lower.includes('location')) {
+      return `📍 **Directions & Transit for ${currentProp.name}**\n\n• **Address/Area:** ${currentProp.location}\n• **Directions:** ${currentProp.directions}\n• Chauffeur airport transfers can be arranged upon request with our concierge desk.`;
+    }
+
+    if (lower.includes('price') || lower.includes('rate') || lower.includes('cost') || lower.includes('night') || lower.includes('how much')) {
+      return `💰 **Nightly Rate for ${currentProp.name}**\n\n• **Rate:** **${currentProp.price}**\n• Accommodates up to **${currentProp.maxGuests} guests** across **${currentProp.beds}**.\n• Includes complimentary high-speed Wi-Fi, premium linens, and 24/7 guest concierge support.`;
+    }
+  }
+
+  // 5. CROSS-PROPERTY DETECTION (User asks about another city while in chat)
+  const matchedProp = kyntoProperties.find(p => 
+    lower.includes(p.city.toLowerCase()) || 
+    lower.includes(p.name.toLowerCase()) ||
+    (lower.includes('dubai') && p.city === 'Dubai') ||
+    (lower.includes('london') && p.city === 'London') ||
+    (lower.includes('new york') && p.city === 'New York') ||
+    (lower.includes('paris') && p.city === 'Paris') ||
+    (lower.includes('istanbul') && p.city === 'Istanbul') ||
+    (lower.includes('sydney') && p.city === 'Sydney') ||
+    (lower.includes('mykonos') && p.city === 'Mykonos') ||
+    (lower.includes('bali') && p.city === 'Bali')
+  );
+
+  if (matchedProp && matchedProp.id !== propertyId) {
+    return `🌟 **${matchedProp.name}** in ${matchedProp.city}, ${matchedProp.country}\n\n• **Type:** ${matchedProp.type}\n• **Rate:** **${matchedProp.price}** (Max ${matchedProp.maxGuests} guests)\n• **Highlights:** ${matchedProp.desc}\n• **Check-in:** ${matchedProp.checkIn.split('.')[0]}\n\n*Would you like me to switch the concierge stay context to ${matchedProp.name}? Click the dropdown above or ask me any question!*`;
+  }
+
+  // 6. CO-HOSTING & BUSINESS MODEL (40% / 30%)
+  if (lower.includes('co-host') || lower.includes('commission') || lower.includes('40') || lower.includes('30') || lower.includes('60') || lower.includes('70') || lower.includes('earn') || lower.includes('fee') || lower.includes('plan')) {
+    return "💼 **Kynto Co-Hosting Revenue Model**\n\nWe provide 100% turnkey short-term rental management:\n\n• **Monthly Plan (Most Popular):** Kynto fee is **40%** &bull; **You keep 60%**.\n  *Fixed full-service management. We handle all messaging, dynamic pricing, 5-star linen turnover, and 24/7 guest care.*\n\n• **Per Booking Plan:** Kynto fee is **30%** &bull; **You keep 70%**.\n  *Flexible commission paid only when guests book. You retain full personal calendar usage.*\n\n• **Payouts:** Processed twice monthly on the **1st and 15th** via Wise or bank transfer in USD.\n• **Zero Fixed Costs:** No sign-up or onboarding fees.";
+  }
+
+  // 7. LISTING / ALL PROPERTIES
+  if (lower.includes('all') || lower.includes('list') || lower.includes('properties') || lower.includes('portfolio') || lower.includes('show')) {
+    return "🌍 **Kynto Global 9 Luxury Properties:**\n\n" +
+      kyntoProperties.map(p => `• **${p.name}** (${p.city}, ${p.country}) — **${p.price}** • *${p.type}*`).join('\n') +
+      "\n\nEach property has a verified 6-photo gallery. Click any property card above to inspect photos and full details!";
+  }
+
+  // 8. ADD PROPERTY / ONBOARDING
+  if (lower.includes('add') || lower.includes('onboard') || lower.includes('join') || lower.includes('list my')) {
+    return "📝 **Listing Your Property with Kynto Global**\n\n1. Click the black **'+ Add Your Property'** button in the top navigation.\n2. Fill in your property name, location, target price, and photos.\n3. Our global onboarding team verifies your listing within 24 hours and activates international marketing across Airbnb and direct luxury channels.\n\nOr message our partner director on WhatsApp at **+92 318 2653259**.";
+  }
+
+  // 9. CLEANING & SERVICE STANDARDS
+  if (lower.includes('clean') || lower.includes('linen') || lower.includes('turnover') || lower.includes('maintenance')) {
+    return "🧹 **Hotel-Grade Cleaning & Turnover Standards**\n\nKynto Global provides 5-star professional turnover after every guest:\n\n• Professional laundering of high-thread Egyptian cotton linens and towels\n• Comprehensive sanitization of bathrooms and chef kitchens\n• Full inventory check and amenity restocking (toiletries, Nespresso pods, tea)\n• Pre-arrival inspection by dedicated property supervisor.";
+  }
+
+  // 10. DEFAULT HELPFUL FALLBACK WITH CLARIFYING QUESTION
+  if (currentProp) {
+    return `Hello! Regarding **${currentProp.name}** in ${currentProp.city}:\n\nCould you clarify if you are asking about **check-in/arrival instructions**, **Wi-Fi connectivity**, **parking reservations**, **house rules**, or **local dining recommendations**?\n\nFor custom requests or direct host communication, our host **${currentProp.host.name}** is available on WhatsApp at **${currentProp.host.phone}**.`;
+  }
+
+  return "Hello from **Kynto AI Concierge**! 🌟\n\nWe manage 9 luxury properties worldwide across Dubai, New York, Paris, Istanbul, Sydney, Mykonos, London, and Bali.\n\nHow can I help you today? You can ask about:\n• Check-in / Wi-Fi / Parking details for any residence\n• Our 40% Monthly or 30% Per Booking co-host revenue plans\n• Listing your property with Kynto Global\n• Direct host desk support via WhatsApp (+92 318 2653259)";
+}
+
+function resetCurrentChat() {
+  if (confirm("Reset conversation history for this context?")) {
+    conversationHistory[currentChatProperty] = [];
+    if (currentChatProperty === 'general') {
+      conversationHistory.general = [
+        { role: 'assistant', text: defaultWelcome.general, time: formatTime(new Date()) }
+      ];
+    } else {
+      const p = kyntoProperties.find(item => item.id === currentChatProperty);
+      if (p) {
+        conversationHistory[currentChatProperty] = [
+          {
+            role: 'assistant',
+            text: `Conversation reset. How can I help you regarding **${p.name}** in ${p.city}?`,
+            time: formatTime(new Date())
+          }
+        ];
+      }
+    }
+    saveChatHistory();
+    renderChatMessages();
+  }
+}
+
+// ==========================================
+// 6. INITIALIZATION ON DOM READY
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  renderProperties('all');
+  initChatHistory();
+  switchChatContext('general');
+});
 </script>
 </body>
 </html>
